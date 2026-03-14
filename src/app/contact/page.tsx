@@ -34,23 +34,23 @@ export default function ContactPage() {
             </p>
           </div>
         </section>
-        <section className="px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-2xl">
-            <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xl shadow-slate-200/50">
-              <div className="border-b border-slate-100 bg-gradient-to-r from-slate-50 to-indigo-50/30 px-8 py-8 sm:px-10 sm:py-10">
-                <h2 className="text-xl font-semibold text-slate-900">Send us a message</h2>
-                <p className="mt-2 text-sm text-slate-600">
-                  We typically respond within 1–2 business days.
-                </p>
-                <div className="mt-8">
-                  <ContactForm />
-                </div>
-              </div>
-            </div>
-            <div className="mt-16 border-t border-slate-200 pt-16">
+            {/*<div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xl shadow-slate-200/50">*/}
+            {/*  <div className="border-b border-slate-100 bg-gradient-to-r from-slate-50 to-indigo-50/30 px-8 py-8 sm:px-10 sm:py-10">*/}
+            {/*    <h2 className="text-xl font-semibold text-slate-900">Send us a message</h2>*/}
+            {/*    <p className="mt-2 text-sm text-slate-600">*/}
+            {/*      We typically respond within 1–2 business days.*/}
+            {/*    </p>*/}
+            {/*    <div className="mt-8">*/}
+            {/*      <ContactForm />*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
+            <div>
               <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
                 <MailIcon className="h-5 w-5 text-indigo-600" />
-                Other ways to reach us
+                Send us a message
               </h2>
               <ul className="mt-6 space-y-4">
                 <li className="flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/50 px-4 py-3">
