@@ -24,7 +24,7 @@ export function ContactForm() {
           name="name"
           type="text"
           required
-          className="mt-1 block w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+          className="mt-2 block w-full rounded-xl border border-slate-300 px-4 py-3.5 text-slate-900 shadow-sm transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
           placeholder="Your name"
         />
       </div>
@@ -37,7 +37,7 @@ export function ContactForm() {
           name="email"
           type="email"
           required
-          className="mt-1 block w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+          className="mt-2 block w-full rounded-xl border border-slate-300 px-4 py-3.5 text-slate-900 shadow-sm transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
           placeholder="you@example.com"
         />
       </div>
@@ -50,24 +50,24 @@ export function ContactForm() {
           name="message"
           rows={5}
           required
-          className="mt-1 block w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+          className="mt-2 block w-full rounded-xl border border-slate-300 px-4 py-3.5 text-slate-900 shadow-sm transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
           placeholder="How can we help?"
         />
       </div>
-      <div>
+      <div className="pt-2">
         <button
           type="submit"
           disabled={status === "sending"}
-          className="w-full rounded-xl bg-indigo-600 px-4 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-70 sm:w-auto sm:px-8"
+          className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:shadow-indigo-500/40 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-70"
         >
           {status === "sending" ? "Sending…" : status === "sent" ? "Message sent" : "Send message"}
         </button>
       </div>
       {status === "sent" && (
-        <p className="text-sm text-green-600">Thanks for reaching out. We&apos;ll get back to you soon.</p>
+        <p className="text-sm font-medium text-green-600">Thanks for reaching out. We&apos;ll get back to you soon.</p>
       )}
       {status === "error" && (
-        <p className="text-sm text-red-600">Something went wrong. Please try again or email us directly.</p>
+        <p className="text-sm font-medium text-red-600">Something went wrong. Please try again or email us directly.</p>
       )}
     </form>
   );

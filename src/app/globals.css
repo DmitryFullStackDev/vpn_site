@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
+  --gradient-start: #4f46e5;
+  --gradient-end: #6366f1;
+  --gradient-muted: #eef2ff;
 }
 
 @theme inline {
@@ -16,6 +19,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Subtle grid pattern for cybersecurity feel */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgb(148 163 184 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(148 163 184 / 0.06) 1px, transparent 1px);
+  background-size: 2.5rem 2.5rem;
+}
+
+/* Soft glow for CTAs and cards */
+.glow-indigo {
+  box-shadow: 0 0 40px -10px rgb(79 70 229 / 0.35);
 }
 
 /* Focus visible for accessibility */

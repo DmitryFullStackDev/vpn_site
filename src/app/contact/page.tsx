@@ -19,54 +19,64 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white">
-        <section className="border-b border-slate-200 bg-gradient-to-b from-slate-50 to-white px-4 pt-16 pb-12 sm:px-6 sm:pt-24 sm:pb-16 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+        <section className="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-slate-50 via-indigo-50/30 to-white px-4 pt-20 pb-20 sm:px-6 sm:pt-28 sm:pb-24 lg:px-8">
+          <div className="absolute inset-0 bg-grid-pattern" aria-hidden />
+          <div className="relative mx-auto max-w-3xl text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200/80 bg-white/80 px-4 py-2 text-sm font-semibold text-indigo-700 shadow-sm backdrop-blur-sm">
+              <MailIcon className="h-4 w-4" />
+              <span>Get in touch</span>
+            </div>
+            <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
               Get in touch
             </h1>
-            <p className="mt-4 text-xl text-slate-600">
-              Have a question, feedback, or want to partner with us? We’d love to hear from you.
+            <p className="mt-6 text-xl text-slate-600">
+              Have a question, feedback, or want to partner with us? We'd love to hear from you.
             </p>
           </div>
         </section>
-        <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <section className="px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-2xl">
-            <div className="rounded-2xl border border-slate-200 bg-slate-50/50 p-8 sm:p-10">
-              <h2 className="text-lg font-semibold text-slate-900">Send us a message</h2>
-              <p className="mt-1 text-sm text-slate-600">
-                We typically respond within 1–2 business days.
-              </p>
-              <div className="mt-8">
-                <ContactForm />
+            <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xl shadow-slate-200/50">
+              <div className="border-b border-slate-100 bg-gradient-to-r from-slate-50 to-indigo-50/30 px-8 py-8 sm:px-10 sm:py-10">
+                <h2 className="text-xl font-semibold text-slate-900">Send us a message</h2>
+                <p className="mt-2 text-sm text-slate-600">
+                  We typically respond within 1–2 business days.
+                </p>
+                <div className="mt-8">
+                  <ContactForm />
+                </div>
               </div>
             </div>
-            <div className="mt-12 border-t border-slate-200 pt-12">
-              <h2 className="text-lg font-semibold text-slate-900">Other ways to reach us</h2>
-              <ul className="mt-4 space-y-3 text-slate-600">
-                <li>
-                  <span className="font-medium text-slate-700">General inquiries:</span>{" "}
-                  <a href="mailto:hello@orbitsafevpn.com" className="text-indigo-600 hover:text-indigo-500">
+            <div className="mt-16 border-t border-slate-200 pt-16">
+              <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
+                <MailIcon className="h-5 w-5 text-indigo-600" />
+                Other ways to reach us
+              </h2>
+              <ul className="mt-6 space-y-4">
+                <li className="flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/50 px-4 py-3">
+                  <span className="text-sm font-medium text-slate-700">General:</span>
+                  <a href="mailto:hello@orbitsafevpn.com" className="text-indigo-600 hover:text-indigo-500 font-medium">
                     hello@orbitsafevpn.com
                   </a>
                 </li>
-                <li>
-                  <span className="font-medium text-slate-700">Support:</span>{" "}
-                  <a href="mailto:support@orbitsafevpn.com" className="text-indigo-600 hover:text-indigo-500">
+                <li className="flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/50 px-4 py-3">
+                  <span className="text-sm font-medium text-slate-700">Support:</span>
+                  <a href="mailto:support@orbitsafevpn.com" className="text-indigo-600 hover:text-indigo-500 font-medium">
                     support@orbitsafevpn.com
                   </a>
                 </li>
-                <li>
-                  <span className="font-medium text-slate-700">Privacy & legal:</span>{" "}
-                  <a href="mailto:privacy@orbitsafevpn.com" className="text-indigo-600 hover:text-indigo-500">
+                <li className="flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/50 px-4 py-3">
+                  <span className="text-sm font-medium text-slate-700">Privacy & legal:</span>
+                  <a href="mailto:privacy@orbitsafevpn.com" className="text-indigo-600 hover:text-indigo-500 font-medium">
                     privacy@orbitsafevpn.com
                   </a>
                 </li>
               </ul>
-              <div className="mt-8 rounded-xl bg-slate-100 p-6">
+              <div className="mt-8 rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50/50 to-white p-6">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
                   Company
                 </h3>
-                <p className="mt-2 font-medium text-slate-900">OrbitSafe VPN</p>
+                <p className="mt-2 font-semibold text-slate-900">OrbitSafe VPN</p>
                 <p className="mt-1 text-sm text-slate-600">
                   Secure, private internet for iOS. Coming soon to the App Store.
                 </p>
@@ -77,5 +87,13 @@ export default function ContactPage() {
       </main>
       <Footer />
     </>
+  );
+}
+
+function MailIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
   );
 }

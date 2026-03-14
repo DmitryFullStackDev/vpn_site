@@ -19,26 +19,27 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <Link href="/" className="inline-flex items-center gap-2 text-lg font-bold text-slate-900">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white">
-                <ShieldIcon className="h-4 w-4" />
+    <footer className="relative border-t border-slate-200 bg-gradient-to-b from-slate-50 to-white">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-200/50 to-transparent" aria-hidden />
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-16">
+          <div className="lg:pr-4">
+            <Link href="/" className="inline-flex items-center gap-3 text-lg font-bold text-slate-900">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-indigo-500 text-white shadow-lg shadow-indigo-500/25">
+                <ShieldIcon className="h-5 w-5" />
               </span>
               OrbitSafe VPN
             </Link>
-            <p className="mt-3 max-w-xs text-sm text-slate-600">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-600">
               Secure, private internet for your iPhone. Coming soon to the App Store.
             </p>
           </div>
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">Product</h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-5 space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-slate-600 hover:text-indigo-600">
+                  <Link href={link.href} className="text-sm text-slate-600 transition-colors hover:text-indigo-600">
                     {link.label}
                   </Link>
                 </li>
@@ -47,10 +48,10 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">Legal</h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-5 space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-slate-600 hover:text-indigo-600">
+                  <Link href={link.href} className="text-sm text-slate-600 transition-colors hover:text-indigo-600">
                     {link.label}
                   </Link>
                 </li>
@@ -59,10 +60,10 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">Company</h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-5 space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-slate-600 hover:text-indigo-600">
+                  <Link href={link.href} className="text-sm text-slate-600 transition-colors hover:text-indigo-600">
                     {link.label}
                   </Link>
                 </li>
@@ -70,7 +71,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-10 border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
+        <div className="mt-16 border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
           © {currentYear} OrbitSafe VPN. All rights reserved.
         </div>
       </div>

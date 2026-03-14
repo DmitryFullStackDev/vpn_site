@@ -18,10 +18,15 @@ export default function PrivacyPage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white">
+        <section className="border-b border-slate-200/80 bg-gradient-to-b from-slate-50 to-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900">Privacy Policy</h1>
+            <p className="mt-3 text-slate-600">Last updated: March 14, 2025</p>
+          </div>
+        </section>
         <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <header className="mb-12">
-            <h1 className="text-4xl font-bold text-slate-900">Privacy Policy</h1>
-            <p className="mt-2 text-slate-600">Last updated: March 14, 2025</p>
+          <header className="sr-only">
+            <h1>Privacy Policy</h1>
           </header>
           <div className="prose prose-slate max-w-none space-y-10 text-slate-700">
             <section>
