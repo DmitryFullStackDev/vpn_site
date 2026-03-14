@@ -1,65 +1,117 @@
-import Image from "next/image";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { HeroSection } from "@/components/HeroSection";
+import { FeatureCard } from "@/components/FeatureCard";
+import { FAQ } from "@/components/FAQ";
+import { featureIcons } from "@/components/FeatureIcons";
+
+const benefits = [
+  {
+    title: "Secure VPN connection",
+    description: "Military-grade AES-256 encryption keeps your data safe on any network—public Wi‑Fi, cellular, or home.",
+    icon: featureIcons.secure,
+  },
+  {
+    title: "Fast global servers",
+    description: "Connect to servers in dozens of countries for low latency and smooth streaming and browsing.",
+    icon: featureIcons.fast,
+  },
+  {
+    title: "Privacy protection",
+    description: "Your IP address and online activity stay private. We don’t sell or share your data with third parties.",
+    icon: featureIcons.privacy,
+  },
+  {
+    title: "No logging policy",
+    description: "We don’t keep logs of what you do online. Your browsing history remains yours alone.",
+    icon: featureIcons.noLogs,
+  },
+];
+
+const howItWorksSteps = [
+  { step: 1, title: "Download", text: "Get OrbitSafe VPN from the App Store when it launches." },
+  { step: 2, title: "Connect", text: "Open the app and tap one button to secure your connection." },
+  { step: 3, title: "Browse", text: "Use the internet with confidence on any network." },
+];
+
+const faqItems = [
+  {
+    question: "What is OrbitSafe VPN?",
+    answer: "OrbitSafe VPN is an iOS app that creates a secure, encrypted tunnel between your iPhone and the internet. It hides your IP address and protects your data on public and private networks.",
+  },
+  {
+    question: "When will OrbitSafe VPN be available?",
+    answer: "We’re putting the finishing touches on the app and plan to launch on the App Store soon. Follow our updates or contact us to be notified at launch.",
+  },
+  {
+    question: "Do you keep logs of my activity?",
+    answer: "No. We follow a strict no-logging policy. We don’t store your browsing history, connection timestamps tied to your identity, or any data that could be used to identify what you do online.",
+  },
+  {
+    question: "Is OrbitSafe VPN only for iPhone?",
+    answer: "Our first release is for iOS. We’re focused on delivering a great experience on iPhone and iPad. Other platforms may be considered in the future.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Navbar />
+      <main>
+        <HeroSection />
+        <section id="benefits" className="border-t border-slate-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="text-center text-3xl font-bold text-slate-900">Why choose OrbitSafe VPN?</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-slate-600">
+              Built for simplicity and trust. Here’s what you get with every connection.
+            </p>
+            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {benefits.map((b) => (
+                <FeatureCard key={b.title} title={b.title} description={b.description} icon={b.icon} />
+              ))}
+            </div>
+          </div>
+        </section>
+        <section id="how-it-works" className="border-t border-slate-200 bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="text-center text-3xl font-bold text-slate-900">How it works</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-slate-600">
+              Three simple steps to a safer internet on your iPhone.
+            </p>
+            <div className="mt-12 grid gap-8 sm:grid-cols-3">
+              {howItWorksSteps.map((item) => (
+                <div key={item.step} className="relative rounded-2xl bg-white p-8 shadow-sm">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600 text-lg font-bold text-white">
+                    {item.step}
+                  </span>
+                  <h3 className="mt-4 text-lg font-semibold text-slate-900">{item.title}</h3>
+                  <p className="mt-2 text-slate-600">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="border-t border-slate-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="text-3xl font-bold text-slate-900">Security you can trust</h2>
+            <p className="mt-4 text-slate-600">
+              OrbitSafe VPN uses industry-standard protocols and encryption. Your traffic is encrypted end-to-end through our secure servers, so ISPs, advertisers, and bad actors can’t see what you’re doing online. We’re committed to transparency: our privacy policy and practices are clear and easy to understand.
+            </p>
+          </div>
+        </section>
+        <section id="faq" className="border-t border-slate-200 bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-center text-3xl font-bold text-slate-900">Frequently asked questions</h2>
+            <p className="mx-auto mt-4 max-w-xl text-center text-slate-600">
+              Quick answers to common questions about OrbitSafe VPN.
+            </p>
+            <div className="mt-12">
+              <FAQ items={faqItems} />
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
