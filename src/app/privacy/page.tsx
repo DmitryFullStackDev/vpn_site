@@ -22,7 +22,7 @@ export default function PrivacyPage() {
         <section className="border-b border-slate-200/80 bg-gradient-to-b from-slate-50 to-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <h1 className="text-4xl font-bold tracking-tight text-slate-900">Privacy Policy</h1>
-            <p className="mt-3 text-slate-600">Last updated: April 15, 2026</p>
+            <p className="mt-3 text-slate-600">Last updated: April 16, 2026</p>
           </div>
         </section>
         <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
@@ -58,8 +58,14 @@ export default function PrivacyPage() {
                 <li>DNS queries</li>
                 <li>Traffic contents (the content of what you do online)</li>
                 <li>IP addresses of websites/services you access while connected</li>
-                <li>Persistent VPN connection logs tied to you (e.g., connection/disconnection timestamps, session duration, bandwidth usage per user)</li>
+                <li>Your source IP address when you connect to the VPN service</li>
               </ul>
+              <p className="mt-4">
+                We do not collect or store persistent VPN activity logs that can be used to identify individual user activity, such as browsing history, DNS queries, or traffic contents.
+              </p>
+              <p className="mt-4">
+                We may process minimal operational data such as connection timestamps (start and end time), which are not linked to browsing activity and are used solely for maintaining service functionality and preventing abuse.
+              </p>
             </section>
             <section>
               <h2 className="text-xl font-semibold text-slate-900">4. Data We Do Collect</h2>
@@ -174,9 +180,18 @@ export default function PrivacyPage() {
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">11. Jurisdiction</h2>
+              <h2 className="text-xl font-semibold text-slate-900">11. Jurisdiction and Server Locations</h2>
               <p>
                 OrbitSafe VPN operates from jurisdictions and vendors that may process data in different countries. Where applicable, we use appropriate safeguards for international data transfers as required by law.
+              </p>
+              <p className="mt-4">Our VPN server infrastructure is currently located in:</p>
+              <ul className="list-disc pl-6 space-y-1 mt-2">
+                <li>New York, United States</li>
+                <li>Frankfurt, Germany</li>
+                <li>Amsterdam, Netherlands</li>
+              </ul>
+              <p className="mt-4">
+                User data required for service operation (such as account information) may be processed in these locations or in other jurisdictions where our infrastructure providers operate, in accordance with applicable data protection laws.
               </p>
             </section>
             <section>
