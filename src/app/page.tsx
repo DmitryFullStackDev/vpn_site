@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
@@ -41,7 +42,15 @@ const faqItems = [
   },
   {
     question: "How can I try OrbitSafe VPN?",
-    answer: "OrbitSafe VPN is currently in closed testing on Google Play. Join the testing program to get early access before the public launch.",
+    answer: (
+      <>
+        OrbitSafe VPN is currently in closed testing on Google Play.{" "}
+        <Link href="/get-started" className="text-indigo-600 underline underline-offset-2 hover:text-indigo-500">
+          Follow our step-by-step guide
+        </Link>{" "}
+        to join the testing program and get early access before the public launch.
+      </>
+    ),
   },
   {
     question: "Do you keep logs of my activity?",

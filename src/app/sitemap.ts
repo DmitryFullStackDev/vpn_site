@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://safeorbitvpn.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "features", "privacy", "terms", "contact"];
+  const routes = ["", "features", "get-started", "privacy", "terms", "contact"];
   return routes.map((route) => ({
     url: route ? `${baseUrl}/${route}` : baseUrl,
     lastModified: new Date(),

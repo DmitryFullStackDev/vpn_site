@@ -53,6 +53,14 @@ export function Navbar() {
               Terms
             </Link>
           </li>
+          <li className="ml-2">
+            <Link
+              href="/get-started"
+              className="inline-flex items-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500"
+            >
+              Get Started
+            </Link>
+          </li>
         </ul>
 
         <button
@@ -76,6 +84,15 @@ export function Navbar() {
       {mobileOpen && (
         <div className="border-t border-slate-200 bg-white/95 px-4 py-4 backdrop-blur-md md:hidden">
           <ul className="flex flex-col gap-1">
+            <li>
+              <Link
+                href="/get-started"
+                className="block rounded-xl bg-indigo-600 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-indigo-500"
+                onClick={() => setMobileOpen(false)}
+              >
+                Get Started
+              </Link>
+            </li>
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
