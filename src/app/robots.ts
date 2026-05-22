@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://orbitsafevpn.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://safeorbitvpn.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {

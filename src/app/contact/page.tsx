@@ -55,20 +55,20 @@ export default function ContactPage() {
               <ul className="mt-6 space-y-4">
                 <li className="flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/50 px-4 py-3">
                   <span className="text-sm font-medium text-slate-700">General:</span>
-                  <a href="mailto:hello@orbitsafevpn.com" className="text-indigo-600 hover:text-indigo-500 font-medium">
-                    hello@orbitsafevpn.com
+                  <a href="mailto:hello@safeorbitvpn.com" className="text-indigo-600 hover:text-indigo-500 font-medium">
+                    hello@safeorbitvpn.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/50 px-4 py-3">
                   <span className="text-sm font-medium text-slate-700">Support:</span>
-                  <a href="mailto:support@orbitsafevpn.com" className="text-indigo-600 hover:text-indigo-500 font-medium">
-                    support@orbitsafevpn.com
+                  <a href="mailto:support@safeorbitvpn.com" className="text-indigo-600 hover:text-indigo-500 font-medium">
+                    support@safeorbitvpn.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/50 px-4 py-3">
                   <span className="text-sm font-medium text-slate-700">Privacy & legal:</span>
-                  <a href="mailto:privacy@orbitsafevpn.com" className="text-indigo-600 hover:text-indigo-500 font-medium">
-                    privacy@orbitsafevpn.com
+                  <a href="mailto:privacy@safeorbitvpn.com" className="text-indigo-600 hover:text-indigo-500 font-medium">
+                    privacy@safeorbitvpn.com
                   </a>
                 </li>
               </ul>

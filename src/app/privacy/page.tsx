@@ -205,10 +205,10 @@ export default function PrivacyPage() {
               <p>For privacy questions or data requests, contact us at:</p>
               <p className="mt-2">
                 <a
-                  href="mailto:privacy@orbitsafevpn.com"
+                  href="mailto:privacy@safeorbitvpn.com"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
-                  privacy@orbitsafevpn.com
+                  privacy@safeorbitvpn.com
                 </a>
               </p>
             </section>

@@ -179,10 +179,10 @@ export default function TermsPage() {
               <p>For questions about these Terms, contact us at:</p>
               <p className="mt-2">
                 <a
-                  href="mailto:legal@orbitsafevpn.com"
+                  href="mailto:legal@safeorbitvpn.com"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
-                  legal@orbitsafevpn.com
+                  legal@safeorbitvpn.com
                 </a>
               </p>
             </section>

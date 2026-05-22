@@ -40,4 +40,4 @@ Design tokens: slate for text/borders, indigo for primary brand color, max-width
 
 ### Environment
 
-`NEXT_PUBLIC_SITE_URL` — used in `layout.tsx`, `sitemap.ts`, and `robots.ts` to set the canonical base URL. Falls back to `https://orbitsafevpn.com`.
+`NEXT_PUBLIC_SITE_URL` — used in `layout.tsx`, `sitemap.ts`, and `robots.ts` to set the canonical base URL. Falls back to `https://safeorbitvpn.com`.
