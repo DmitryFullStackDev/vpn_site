@@ -7,11 +7,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "Explore OrbitSafe VPN features: secure VPN connection, fast global servers, privacy protection, no-logging policy, one-tap connect, and kill switch. Built for iOS.",
+    "Explore OrbitSafe VPN features: secure VPN connection, fast global servers, privacy protection, no-logging policy, and one-tap connect. Built for Android.",
   openGraph: {
     title: "Features | OrbitSafe VPN",
     description:
-      "Secure VPN connection, fast servers, privacy protection, no logs, one-tap connect, kill switch. Built for iPhone.",
+      "Secure VPN connection, fast servers, privacy protection, no logs, one-tap connect. Built for Android.",
     type: "website",
   },
 };
@@ -20,13 +20,13 @@ const features = [
   {
     title: "Secure VPN connection",
     description:
-      "Every connection is protected with AES-256 encryption—the same standard trusted by governments and enterprises. Your data stays private on public Wi‑Fi, at home, or on cellular.",
+      "Every connection is protected with ChaCha20-Poly1305 encryption—a modern cipher optimized for speed on mobile hardware. Your data stays private on public Wi‑Fi, at home, or on cellular.",
     icon: featureIcons.secure,
   },
   {
-    title: "Fast global servers",
+    title: "Key server locations",
     description:
-      "Choose from servers in multiple countries and regions. We optimize for speed and stability so you can stream, browse, and work without slowdowns.",
+      "Choose from servers in Frankfurt, Amsterdam, and New York. We optimize each location for speed and stability so you can stream, browse, and work without slowdowns.",
     icon: featureIcons.fast,
   },
   {
@@ -46,12 +46,6 @@ const features = [
     description:
       "No complicated setup. Open the app, tap connect, and you're protected. Perfect for everyday users who want security without the hassle.",
     icon: featureIcons.oneTap,
-  },
-  {
-    title: "Kill switch protection",
-    description:
-      "If your VPN connection drops, the kill switch can block unencrypted traffic so your data is never exposed. Optional and easy to enable in settings.",
-    icon: featureIcons.killSwitch,
   },
 ];
 

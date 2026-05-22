@@ -78,7 +78,7 @@ export default function ContactPage() {
                 </h3>
                 <p className="mt-2 font-semibold text-slate-900">OrbitSafe VPN</p>
                 <p className="mt-1 text-sm text-slate-600">
-                  Secure, private internet for iOS. Coming soon to the App Store.
+                  Secure, private internet for Android. Now in closed testing on Google Play.
                 </p>
               </div>
             </div>

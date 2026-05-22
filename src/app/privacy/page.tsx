@@ -75,7 +75,7 @@ export default function PrivacyPage() {
                   <strong>Account information:</strong> If you create an account, we may collect your email address (or another identifier you provide) to manage access and communicate essential service messages.
                 </li>
                 <li>
-                  <strong>Payment information:</strong> Subscription payments are processed by the Apple App Store (and/or other store providers, if applicable). We do not receive or store your full payment card number. We may receive limited purchase information such as transaction status, product identifier, and timestamps related to the purchase.
+                  <strong>Payment information:</strong> Subscription payments are processed by Google Play (and/or other store providers, if applicable). We do not receive or store your full payment card number. We may receive limited purchase information such as transaction status, product identifier, and timestamps related to the purchase.
                 </li>
                 <li>
                   <strong>Support communications:</strong> If you contact support, we receive the information you choose to share (for example, your email address and the content of your message) to resolve your request.
@@ -87,9 +87,6 @@ export default function PrivacyPage() {
               <ul className="list-disc pl-6 space-y-3">
                 <li>
                   <strong>Strong encryption:</strong> We use modern VPN protocols (for example, WireGuard&reg;) to encrypt traffic between your device and our servers.
-                </li>
-                <li>
-                  <strong>Privacy features:</strong> Depending on the platform/version, features may include kill switch, private DNS, and split tunneling.
                 </li>
                 <li>
                   <strong>Operational safeguards:</strong> We design our systems to minimize data exposure and limit access to operational data to authorized personnel only.
@@ -120,7 +117,7 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc pl-6 space-y-3">
                 <li>
-                  <strong>App stores &amp; payments:</strong> Apple (and other app store providers, if applicable) processes purchases and subscriptions.
+                  <strong>App stores &amp; payments:</strong> Google Play (and other app store providers, if applicable) processes purchases and subscriptions.
                 </li>
                 <li>
                   <strong>Support tooling:</strong> If we use a support platform (for example, a ticketing system), it may process your support messages and email address.

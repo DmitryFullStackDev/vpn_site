@@ -17,12 +17,12 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://safeorbitvpn.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "OrbitSafe VPN — Secure & Private Internet for iPhone",
+    default: "OrbitSafe VPN — Secure & Private Internet for Android",
     template: "%s | OrbitSafe VPN",
   },
   description:
-    "OrbitSafe VPN provides a secure, private internet connection for your iPhone. Encrypt your traffic, hide your IP, and browse without being tracked. Coming soon to the App Store.",
-  keywords: ["VPN", "iOS", "iPhone", "privacy", "security", "encryption", "OrbitSafe"],
+    "OrbitSafe VPN provides a secure, private internet connection for your Android device. Encrypt your traffic, hide your IP, and browse without being tracked. Now in closed testing on Google Play.",
+  keywords: ["VPN", "Android", "Google Play", "privacy", "security", "encryption", "OrbitSafe"],
   authors: [{ name: "OrbitSafe VPN" }],
   openGraph: {
     type: "website",
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "OrbitSafe VPN — Secure & Private Internet for iPhone",
+        alt: "OrbitSafe VPN — Secure & Private Internet for Android",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "OrbitSafe VPN — Secure & Private Internet for iPhone",
-    description: "Encrypt your connection, hide your location, browse without being tracked. Coming soon to the App Store.",
+    title: "OrbitSafe VPN — Secure & Private Internet for Android",
+    description: "Encrypt your connection, hide your location, browse without being tracked. Now in closed testing on Google Play.",
   },
   robots: {
     index: true,

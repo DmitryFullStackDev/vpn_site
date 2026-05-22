@@ -15,7 +15,7 @@ No test suite is configured.
 
 ## Architecture
 
-**OrbitSafe VPN** is a Next.js 16 marketing/landing site for an iOS VPN app (not yet released). It uses the App Router with TypeScript and Tailwind CSS v4.
+**OrbitSafe VPN** is a Next.js 16 marketing/landing site for an Android VPN app (currently in closed testing on Google Play). It uses the App Router with TypeScript and Tailwind CSS v4.
 
 ### Key patterns
 

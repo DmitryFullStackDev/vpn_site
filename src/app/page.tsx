@@ -8,12 +8,12 @@ import { featureIcons } from "@/components/FeatureIcons";
 const benefits = [
   {
     title: "Secure VPN connection",
-    description: "Military-grade AES-256 encryption keeps your data safe on any network—public Wi‑Fi, cellular, or home.",
+    description: "ChaCha20-Poly1305 encryption keeps your data safe on any network—public Wi‑Fi, cellular, or home. Fast, modern, and built for mobile.",
     icon: featureIcons.secure,
   },
   {
-    title: "Fast global servers",
-    description: "Connect to servers in dozens of countries for low latency and smooth streaming and browsing.",
+    title: "Key server locations",
+    description: "Connect to servers in Frankfurt, Amsterdam, and New York for low latency across Europe and the US. Optimized for smooth streaming and browsing.",
     icon: featureIcons.fast,
   },
   {
@@ -29,7 +29,7 @@ const benefits = [
 ];
 
 const howItWorksSteps = [
-  { step: 1, title: "Download", text: "Get OrbitSafe VPN from the App Store when it launches." },
+  { step: 1, title: "Download", text: "Join the closed testing program on Google Play." },
   { step: 2, title: "Connect", text: "Open the app and tap one button to secure your connection." },
   { step: 3, title: "Browse", text: "Use the internet with confidence on any network." },
 ];
@@ -37,19 +37,19 @@ const howItWorksSteps = [
 const faqItems = [
   {
     question: "What is OrbitSafe VPN?",
-    answer: "OrbitSafe VPN is an iOS app that creates a secure, encrypted tunnel between your iPhone and the internet. It hides your IP address and protects your data on public and private networks.",
+    answer: "OrbitSafe VPN is an Android app that creates a secure, encrypted tunnel between your device and the internet. It hides your IP address and protects your data on public and private networks.",
   },
   {
-    question: "When will OrbitSafe VPN be available?",
-    answer: "We're putting the finishing touches on the app and plan to launch on the App Store soon. Follow our updates or contact us to be notified at launch.",
+    question: "How can I try OrbitSafe VPN?",
+    answer: "OrbitSafe VPN is currently in closed testing on Google Play. Join the testing program to get early access before the public launch.",
   },
   {
     question: "Do you keep logs of my activity?",
     answer: "No. We follow a strict no-logging policy. We don't store your browsing history, connection timestamps tied to your identity, or any data that could be used to identify what you do online.",
   },
   {
-    question: "Is OrbitSafe VPN only for iPhone?",
-    answer: "Our first release is for iOS. We're focused on delivering a great experience on iPhone and iPad. Other platforms may be considered in the future.",
+    question: "Is OrbitSafe VPN only for Android?",
+    answer: "Our first release is for Android. We're focused on delivering a great experience on Android devices. Other platforms may be considered in the future.",
   },
 ];
 
@@ -89,7 +89,7 @@ export default function Home() {
               How it works
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-slate-600">
-              Three simple steps to a safer internet on your iPhone.
+              Three simple steps to a safer internet on your Android device.
             </p>
             <div className="mt-16 grid gap-10 sm:grid-cols-3 lg:gap-12">
               {howItWorksSteps.map((item) => (

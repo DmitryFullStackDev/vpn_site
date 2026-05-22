@@ -31,7 +31,7 @@ export function Footer() {
               OrbitSafe VPN
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-600">
-              Secure, private internet for your iPhone. Coming soon to the App Store.
+              Secure, private internet for Android. Now in closed testing on Google Play.
             </p>
           </div>
           <div>

@@ -78,7 +78,7 @@ export default function TermsPage() {
               <h2 className="text-xl font-semibold text-slate-900">5. Subscriptions, Billing, and Refunds</h2>
               <p>
                 Some features may require a paid subscription. If you purchase a subscription through an
-                app store (such as Apple), billing, renewals, cancellations, and refunds are handled by
+                app store (such as Google Play), billing, renewals, cancellations, and refunds are handled by
                 that store and subject to its terms and policies. Subscriptions typically auto-renew
                 unless canceled before the end of the current billing period.
               </p>
