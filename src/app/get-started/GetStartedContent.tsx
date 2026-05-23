@@ -13,23 +13,28 @@ const PLAY_STORE_URL =
 
 export function GetStartedContent() {
   const { t, locale } = useLanguage();
-  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
-  const screenshotSrc =
+  const joinSrc =
     locale === "ru"
       ? "/assets/safeorbit_join_ru.png"
       : "/assets/safeorbit_join_en.png";
 
-  const closeLightbox = useCallback(() => setLightboxOpen(false), []);
+  const installSrc =
+    locale === "ru"
+      ? "/assets/safeorbit_install_ru.png"
+      : "/assets/safeorbit_install_en.png";
+
+  const closeLightbox = useCallback(() => setLightboxSrc(null), []);
 
   useEffect(() => {
-    if (!lightboxOpen) return;
+    if (!lightboxSrc) return;
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeLightbox();
     };
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
-  }, [lightboxOpen, closeLightbox]);
+  }, [lightboxSrc, closeLightbox]);
 
   return (
     <>
@@ -68,28 +73,11 @@ export function GetStartedContent() {
                     {t.getStarted.step1.description}
                   </p>
 
-                  {/* Screenshot thumbnail */}
-                  <button
-                    type="button"
-                    onClick={() => setLightboxOpen(true)}
-                    className="group relative mt-5 block w-full overflow-hidden rounded-xl border border-slate-200 shadow-md transition hover:border-indigo-300 hover:shadow-indigo-500/10 cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    aria-label="View screenshot full size"
-                  >
-                    <Image
-                      src={screenshotSrc}
-                      alt="Google Groups join screenshot"
-                      width={1512}
-                      height={780}
-                      className="w-full rounded-xl"
-                      priority
-                    />
-                    <div className="absolute inset-0 flex items-end justify-end bg-gradient-to-t from-slate-900/20 to-transparent p-3 opacity-0 transition-opacity group-hover:opacity-100">
-                      <span className="flex items-center gap-1.5 rounded-lg bg-white/90 px-2.5 py-1.5 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur-sm">
-                        <ExpandIcon className="h-3.5 w-3.5" />
-                        Full size
-                      </span>
-                    </div>
-                  </button>
+                  <ScreenshotThumbnail
+                    src={joinSrc}
+                    alt="Google Groups join screenshot"
+                    onClick={() => setLightboxSrc(joinSrc)}
+                  />
 
                   <div className="mt-6">
                     <Link
@@ -106,8 +94,8 @@ export function GetStartedContent() {
               </div>
 
               {/* Step 2 */}
-              <div className="rounded-2xl border border-slate-200/80 bg-white shadow-sm">
-                <div className="p-8 lg:p-10">
+              <div className="flex flex-col rounded-2xl border border-slate-200/80 bg-white shadow-sm">
+                <div className="flex flex-1 flex-col p-8 lg:p-10">
                   <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-indigo-500 text-xl font-bold text-white shadow-lg shadow-indigo-500/25">
                     2
                   </span>
@@ -117,6 +105,13 @@ export function GetStartedContent() {
                   <p className="mt-3 leading-relaxed text-slate-600">
                     {t.getStarted.step2.description}
                   </p>
+
+                  <ScreenshotThumbnail
+                    src={installSrc}
+                    alt="Google Play install screenshot"
+                    onClick={() => setLightboxSrc(installSrc)}
+                  />
+
                   <div className="mt-6">
                     <Link
                       href={PLAY_STORE_URL}
@@ -151,8 +146,8 @@ export function GetStartedContent() {
       </main>
       <Footer />
 
-      {/* Lightbox */}
-      {lightboxOpen && (
+      {/* Shared lightbox */}
+      {lightboxSrc && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm"
           onClick={closeLightbox}
@@ -162,8 +157,8 @@ export function GetStartedContent() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={screenshotSrc}
-              alt="Google Groups join screenshot"
+              src={lightboxSrc}
+              alt="Screenshot full size"
               className="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
             />
             <button
@@ -180,6 +175,40 @@ export function GetStartedContent() {
         </div>
       )}
     </>
+  );
+}
+
+function ScreenshotThumbnail({
+  src,
+  alt,
+  onClick,
+}: {
+  src: string;
+  alt: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="group relative mt-5 block w-full overflow-hidden rounded-xl border border-slate-200 shadow-md transition hover:border-indigo-300 hover:shadow-indigo-500/10 cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+      aria-label="View screenshot full size"
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width={1512}
+        height={780}
+        className="w-full rounded-xl"
+        priority
+      />
+      <div className="absolute inset-0 flex items-end justify-end bg-gradient-to-t from-slate-900/20 to-transparent p-3 opacity-0 transition-opacity group-hover:opacity-100">
+        <span className="flex items-center gap-1.5 rounded-lg bg-white/90 px-2.5 py-1.5 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur-sm">
+          <ExpandIcon className="h-3.5 w-3.5" />
+          Full size
+        </span>
+      </div>
+    </button>
   );
 }
 
