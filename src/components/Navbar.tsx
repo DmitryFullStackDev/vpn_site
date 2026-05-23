@@ -2,15 +2,18 @@
 
 import Link from "next/link";
 import { useState } from "react";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/features", label: "Features" },
-  { href: "/contact", label: "Contact" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import type { Locale } from "@/lib/translations";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t, locale, setLocale } = useLanguage();
+
+  const navLinks = [
+    { href: "/", label: t.navbar.home },
+    { href: "/features", label: t.navbar.features },
+    { href: "/contact", label: t.navbar.contact },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
@@ -42,7 +45,7 @@ export function Navbar() {
               href="/privacy"
               className="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-700"
             >
-              Privacy
+              {t.navbar.privacy}
             </Link>
           </li>
           <li>
@@ -50,35 +53,42 @@ export function Navbar() {
               href="/terms"
               className="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-700"
             >
-              Terms
+              {t.navbar.terms}
             </Link>
+          </li>
+          <li className="ml-2 h-6 w-px bg-slate-200" aria-hidden />
+          <li>
+            <LangToggle locale={locale} setLocale={setLocale} />
           </li>
           <li className="ml-2">
             <Link
               href="/get-started"
               className="inline-flex items-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500"
             >
-              Get Started
+              {t.navbar.getStarted}
             </Link>
           </li>
         </ul>
 
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-xl p-2.5 text-slate-600 transition-colors hover:bg-slate-100 md:hidden"
-          aria-label="Toggle menu"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LangToggle locale={locale} setLocale={setLocale} />
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-xl p-2.5 text-slate-600 transition-colors hover:bg-slate-100"
+            aria-label="Toggle menu"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </nav>
 
       {mobileOpen && (
@@ -90,7 +100,7 @@ export function Navbar() {
                 className="block rounded-xl bg-indigo-600 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-indigo-500"
                 onClick={() => setMobileOpen(false)}
               >
-                Get Started
+                {t.navbar.getStarted}
               </Link>
             </li>
             {navLinks.map((link) => (
@@ -110,7 +120,7 @@ export function Navbar() {
                 className="block rounded-xl px-4 py-3 text-sm text-slate-600 transition-colors hover:bg-slate-50"
                 onClick={() => setMobileOpen(false)}
               >
-                Privacy Policy
+                {t.navbar.privacyPolicy}
               </Link>
             </li>
             <li>
@@ -119,13 +129,34 @@ export function Navbar() {
                 className="block rounded-xl px-4 py-3 text-sm text-slate-600 transition-colors hover:bg-slate-50"
                 onClick={() => setMobileOpen(false)}
               >
-                Terms of Service
+                {t.navbar.termsOfService}
               </Link>
             </li>
           </ul>
         </div>
       )}
     </header>
+  );
+}
+
+function LangToggle({ locale, setLocale }: { locale: Locale; setLocale: (l: Locale) => void }) {
+  return (
+    <div className="flex items-center rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs font-semibold">
+      {(["en", "ru"] as Locale[]).map((lang) => (
+        <button
+          key={lang}
+          type="button"
+          onClick={() => setLocale(lang)}
+          className={`rounded-md px-2.5 py-1 uppercase transition-colors ${
+            locale === lang
+              ? "bg-white text-indigo-600 shadow-sm"
+              : "text-slate-500 hover:text-slate-700"
+          }`}
+        >
+          {lang}
+        </button>
+      ))}
+    </div>
   );
 }
 

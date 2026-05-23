@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -5,64 +7,34 @@ import { HeroSection } from "@/components/HeroSection";
 import { FeatureCard } from "@/components/FeatureCard";
 import { FAQ } from "@/components/FAQ";
 import { featureIcons } from "@/components/FeatureIcons";
-
-const benefits = [
-  {
-    title: "Secure VPN connection",
-    description: "ChaCha20-Poly1305 encryption keeps your data safe on any network—public Wi‑Fi, cellular, or home. Fast, modern, and built for mobile.",
-    icon: featureIcons.secure,
-  },
-  {
-    title: "Key server locations",
-    description: "Connect to servers in Frankfurt, Amsterdam, and New York for low latency across Europe and the US. Optimized for smooth streaming and browsing.",
-    icon: featureIcons.fast,
-  },
-  {
-    title: "Privacy protection",
-    description: "Your IP address and online activity stay private. We don't sell or share your data with third parties.",
-    icon: featureIcons.privacy,
-  },
-  {
-    title: "No logging policy",
-    description: "We don't keep logs of what you do online. Your browsing history remains yours alone.",
-    icon: featureIcons.noLogs,
-  },
-];
-
-const howItWorksSteps = [
-  { step: 1, title: "Download", text: "Join the closed testing program on Google Play." },
-  { step: 2, title: "Connect", text: "Open the app and tap one button to secure your connection." },
-  { step: 3, title: "Browse", text: "Use the internet with confidence on any network." },
-];
-
-const faqItems = [
-  {
-    question: "What is OrbitSafe VPN?",
-    answer: "OrbitSafe VPN is an Android app that creates a secure, encrypted tunnel between your device and the internet. It hides your IP address and protects your data on public and private networks.",
-  },
-  {
-    question: "How can I try OrbitSafe VPN?",
-    answer: (
-      <>
-        OrbitSafe VPN is currently in closed testing on Google Play.{" "}
-        <Link href="/get-started" className="text-indigo-600 underline underline-offset-2 hover:text-indigo-500">
-          Follow our step-by-step guide
-        </Link>{" "}
-        to join the testing program and get early access before the public launch.
-      </>
-    ),
-  },
-  {
-    question: "Do you keep logs of my activity?",
-    answer: "No. We follow a strict no-logging policy. We don't store your browsing history, connection timestamps tied to your identity, or any data that could be used to identify what you do online.",
-  },
-  {
-    question: "Is OrbitSafe VPN only for Android?",
-    answer: "Our first release is for Android. We're focused on delivering a great experience on Android devices. Other platforms may be considered in the future.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
+  const benefits = t.home.benefits.items.map((item, i) => ({
+    ...item,
+    icon: [featureIcons.secure, featureIcons.fast, featureIcons.privacy, featureIcons.noLogs][i],
+  }));
+
+  const faqItems = t.home.faq.items.map((item) => {
+    if ("answerLinkText" in item) {
+      return {
+        question: item.question,
+        answer: (
+          <>
+            {item.answer}{" "}
+            <Link href="/get-started" className="text-indigo-600 underline underline-offset-2 hover:text-indigo-500">
+              {item.answerLinkText}
+            </Link>{" "}
+            {item.answerSuffix}
+          </>
+        ),
+      };
+    }
+    return { question: item.question, answer: item.answer };
+  });
+
   return (
     <>
       <Navbar />
@@ -72,13 +44,13 @@ export default function Home() {
           <div className="mx-auto max-w-6xl">
             <div className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-indigo-600">
               <ShieldIcon className="h-4 w-4" />
-              <span>Why choose us</span>
+              <span>{t.home.benefits.badge}</span>
             </div>
             <h2 className="mt-4 text-center text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              Why choose OrbitSafe VPN?
+              {t.home.benefits.heading}
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-slate-600">
-              Built for simplicity and trust. Here's what you get with every connection.
+              {t.home.benefits.subheading}
             </p>
             <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {benefits.map((b) => (
@@ -92,20 +64,20 @@ export default function Home() {
           <div className="relative mx-auto max-w-6xl">
             <div className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-indigo-600">
               <StepsIcon className="h-4 w-4" />
-              <span>Simple steps</span>
+              <span>{t.home.howItWorks.badge}</span>
             </div>
             <h2 className="mt-4 text-center text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              How it works
+              {t.home.howItWorks.heading}
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-slate-600">
-              Three simple steps to a safer internet on your Android device.
+              {t.home.howItWorks.subheading}
             </p>
             <div className="mt-16 grid gap-10 sm:grid-cols-3 lg:gap-12">
-              {howItWorksSteps.map((item) => (
-                <div key={item.step} className="relative">
+              {t.home.howItWorks.steps.map((item, i) => (
+                <div key={i} className="relative">
                   <div className="relative rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all hover:border-indigo-200 hover:shadow-lg hover:shadow-indigo-500/5 lg:p-10">
                     <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-indigo-500 text-xl font-bold text-white shadow-lg shadow-indigo-500/25">
-                      {item.step}
+                      {i + 1}
                     </span>
                     <h3 className="mt-6 text-xl font-semibold text-slate-900">{item.title}</h3>
                     <p className="mt-3 text-slate-600">{item.text}</p>
@@ -119,13 +91,13 @@ export default function Home() {
           <div className="mx-auto max-w-4xl text-center">
             <div className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-indigo-600">
               <LockIcon className="h-4 w-4" />
-              <span>Security</span>
+              <span>{t.home.security.badge}</span>
             </div>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              Security you can trust
+              {t.home.security.heading}
             </h2>
             <p className="mt-8 text-lg leading-relaxed text-slate-600">
-              OrbitSafe VPN uses industry-standard protocols and encryption. Your traffic is encrypted end-to-end through our secure servers, so ISPs, advertisers, and bad actors can't see what you're doing online. We're committed to transparency: our privacy policy and practices are clear and easy to understand.
+              {t.home.security.body}
             </p>
           </div>
         </section>
@@ -133,13 +105,13 @@ export default function Home() {
           <div className="mx-auto max-w-3xl">
             <div className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-indigo-600">
               <HelpIcon className="h-4 w-4" />
-              <span>Support</span>
+              <span>{t.home.faq.badge}</span>
             </div>
             <h2 className="mt-4 text-center text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              Frequently asked questions
+              {t.home.faq.heading}
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-center text-lg text-slate-600">
-              Quick answers to common questions about OrbitSafe VPN.
+              {t.home.faq.subheading}
             </p>
             <div className="mt-16">
               <FAQ items={faqItems} />

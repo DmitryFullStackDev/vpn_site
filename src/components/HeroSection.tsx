@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function HeroSection() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-indigo-50/30 to-white px-4 pt-20 pb-28 sm:px-6 sm:pt-28 sm:pb-36 lg:px-8">
       <div className="absolute inset-0 bg-grid-pattern" aria-hidden />
@@ -9,16 +14,16 @@ export function HeroSection() {
       <div className="relative mx-auto max-w-4xl text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200/80 bg-white/80 px-4 py-2 text-sm font-medium text-indigo-700 shadow-sm backdrop-blur-sm">
           <LockIcon className="h-4 w-4" />
-          <span>Now in closed testing on Android</span>
+          <span>{t.hero.badge}</span>
         </div>
         <h1 className="mt-8 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl lg:leading-tight">
-          Privacy that travels with you
+          {t.hero.heading}
         </h1>
         <p className="mt-6 text-xl text-slate-600 sm:text-2xl">
-          OrbitSafe VPN — secure, fast, and simple. One tap to a safer internet on your Android device.
+          {t.hero.subheading}
         </p>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600">
-          Encrypt your connection, hide your location, and browse without being tracked. Built for Android with a focus on speed and ease of use.
+          {t.hero.description}
         </p>
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
@@ -26,7 +31,7 @@ export function HeroSection() {
             className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-indigo-500/30 transition hover:shadow-indigo-500/40 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
             <GooglePlayIcon className="h-7 w-7" />
-            <span>Join Closed Testing on Google Play</span>
+            <span>{t.hero.cta}</span>
           </Link>
         </div>
       </div>

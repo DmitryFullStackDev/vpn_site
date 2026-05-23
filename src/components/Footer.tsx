@@ -1,22 +1,26 @@
-import Link from "next/link";
+"use client";
 
-const footerLinks = {
-  product: [
-    { href: "/features", label: "Features" },
-    { href: "/#how-it-works", label: "How it works" },
-    { href: "/#faq", label: "FAQ" },
-  ],
-  legal: [
-    { href: "/privacy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Service" },
-  ],
-  company: [
-    { href: "/contact", label: "Contact" },
-  ],
-};
+import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
+
+  const footerLinks = {
+    product: [
+      { href: "/features", label: t.footer.links.features },
+      { href: "/#how-it-works", label: t.footer.links.howItWorks },
+      { href: "/#faq", label: t.footer.links.faq },
+    ],
+    legal: [
+      { href: "/privacy", label: t.footer.links.privacyPolicy },
+      { href: "/terms", label: t.footer.links.termsOfService },
+    ],
+    company: [
+      { href: "/contact", label: t.footer.links.contact },
+    ],
+  };
 
   return (
     <footer className="relative border-t border-slate-200 bg-gradient-to-b from-slate-50 to-white">
@@ -31,11 +35,11 @@ export function Footer() {
               OrbitSafe VPN
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-600">
-              Secure, private internet for Android. Now in closed testing on Google Play.
+              {t.footer.tagline}
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">Product</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">{t.footer.product}</h3>
             <ul className="mt-5 space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.href}>
@@ -47,7 +51,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">Legal</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">{t.footer.legal}</h3>
             <ul className="mt-5 space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
@@ -59,7 +63,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">Company</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">{t.footer.company}</h3>
             <ul className="mt-5 space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -72,7 +76,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
-          © {currentYear} OrbitSafe VPN. All rights reserved.
+          © {currentYear} OrbitSafe VPN. {t.footer.copyright}
         </div>
       </div>
     </footer>
