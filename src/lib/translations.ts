@@ -177,19 +177,19 @@ export const translations = {
       step1: {
         title: "Join the testers group",
         description:
-          "Click the button below to join our Google Group. This adds you to the approved testers list automatically — no manual approval needed.",
+          "Click the button below to open our Google Group page, then click Join (see the screenshot below). This will automatically add you to the approved testers list.",
         cta: "Join the testers group",
       },
       step2: {
-        title: "Opt in on Google Play",
+        title: "Install OrbitSafe VPN",
         description:
-          "Open the Play Store page and tap “Join the test”. You may need to wait a few minutes after joining the group for access to activate.",
+          "Open the Play Store page and tap \"Install\". If the page is found, wait a few minutes for access to activate and try again.",
         cta: "Open on Google Play",
       },
       step3: {
-        title: "Install OrbitSafe VPN",
+        title: "Open OrbitSafe VPN",
         description:
-          "After accepting the test, tap Install. OrbitSafe VPN will appear in your Android app list and you’re ready to go.",
+          "Open OrbitSafe VPN on your Android and try our VPN.",
       },
     },
   },
@@ -370,19 +370,19 @@ export const translations = {
       step1: {
         title: "Вступить в группу тестировщиков",
         description:
-          "Нажмите кнопку ниже, чтобы вступить в нашу Google Group. Это автоматически добавит вас в список одобренных тестировщиков — ручное подтверждение не требуется.",
+          "Нажмите кнопку ниже, чтобы вступить в нашу Google Group, на открывшейся странице нажмите на присоединиться (смотрите скриншот внизу). Это автоматически добавит вас в список одобренных тестировщиков.",
         cta: "Вступить в группу",
       },
       step2: {
-        title: "Активировать в Google Play",
+        title: "Установить OrbitSafe VPN",
         description:
-          "Откройте страницу в Play Store и нажмите «Принять участие в тестировании». Возможно, придётся подождать несколько минут после вступления в группу, пока доступ активируется.",
+          "Откройте страницу в Play Store и нажмите «Установить». Если страница найдена, то подождите несколько минут, пока появится доступ и попробуйте снова.",
         cta: "Открыть в Google Play",
       },
       step3: {
-        title: "Установить OrbitSafe VPN",
+        title: "Открыть OrbitSafe VPN",
         description:
-          "После принятия теста нажмите «Установить». OrbitSafe VPN появится в списке приложений Android — и всё готово.",
+          "Откройте OrbitSafe VPN на вашем Android и попробуйте наш VPN.",
       },
     },
   },
