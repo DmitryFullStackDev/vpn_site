@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { FeaturesContent } from "./FeaturesContent";
 
 export const metadata: Metadata = {
-  title: "Features",
+  title: "Функции",
   description:
-    "Explore OrbitSafe VPN features: secure VPN connection, fast global servers, privacy protection, no-logging policy, and one-tap connect. Built for Android.",
+    "Функции OrbitSafe: защищённое соединение, быстрые серверы по всему миру, защита приватности, политика без логов и простое подключение через Telegram-бота.",
   openGraph: {
-    title: "Features | OrbitSafe VPN",
+    title: "Функции | OrbitSafe",
     description:
-      "Secure VPN connection, fast servers, privacy protection, no logs, one-tap connect. Built for Android.",
+      "Защищённое соединение, быстрые серверы, защита приватности, без логов, простое подключение через бота.",
     type: "website",
   },
 };

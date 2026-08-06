@@ -3,11 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import type { Locale } from "@/lib/translations";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { t, locale, setLocale } = useLanguage();
+  const { t } = useLanguage();
 
   const navLinks = [
     { href: "/", label: t.navbar.home },
@@ -25,7 +24,7 @@ export function Navbar() {
           <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-indigo-500 text-white shadow-lg shadow-indigo-500/25">
             <ShieldIcon className="h-5 w-5" />
           </span>
-          OrbitSafe VPN
+          OrbitSafe
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -56,10 +55,6 @@ export function Navbar() {
               {t.navbar.terms}
             </Link>
           </li>
-          <li className="ml-2 h-6 w-px bg-slate-200" aria-hidden />
-          <li>
-            <LangToggle locale={locale} setLocale={setLocale} />
-          </li>
           <li className="ml-2">
             <Link
               href="/get-started"
@@ -70,8 +65,7 @@ export function Navbar() {
           </li>
         </ul>
 
-        <div className="flex items-center gap-2 md:hidden">
-          <LangToggle locale={locale} setLocale={setLocale} />
+        <div className="md:hidden">
           <button
             type="button"
             className="inline-flex items-center justify-center rounded-xl p-2.5 text-slate-600 transition-colors hover:bg-slate-100"
@@ -136,27 +130,6 @@ export function Navbar() {
         </div>
       )}
     </header>
-  );
-}
-
-function LangToggle({ locale, setLocale }: { locale: Locale; setLocale: (l: Locale) => void }) {
-  return (
-    <div className="flex items-center rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs font-semibold">
-      {(["en", "ru"] as Locale[]).map((lang) => (
-        <button
-          key={lang}
-          type="button"
-          onClick={() => setLocale(lang)}
-          className={`rounded-md px-2.5 py-1 uppercase transition-colors ${
-            locale === lang
-              ? "bg-white text-indigo-600 shadow-sm"
-              : "text-slate-500 hover:text-slate-700"
-          }`}
-        >
-          {lang}
-        </button>
-      ))}
-    </div>
   );
 }
 

@@ -18,30 +18,30 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://safeorbitvpn.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "OrbitSafe VPN — Secure & Private Internet for Android",
-    template: "%s | OrbitSafe VPN",
+    default: "OrbitSafe — Интернет-свобода для России",
+    template: "%s | OrbitSafe",
   },
   description:
-    "OrbitSafe VPN provides a secure, private internet connection for your Android device. Encrypt your traffic, hide your IP, and browse without being tracked. Now in closed testing on Google Play.",
-  keywords: ["VPN", "Android", "Google Play", "privacy", "security", "encryption", "OrbitSafe"],
-  authors: [{ name: "OrbitSafe VPN" }],
+    "OrbitSafe — приватный доступ в интернет через Telegram-бота. Работает в России. 3 дня бесплатно. Шифрование трафика, анонимность, без логов.",
+  keywords: ["Россия", "Telegram", "бот", "приватность", "зашифрованный доступ", "свобода в интернете", "безопасность", "шифрование", "OrbitSafe"],
+  authors: [{ name: "OrbitSafe" }],
   openGraph: {
     type: "website",
-    locale: "en_US",
-    siteName: "OrbitSafe VPN",
+    locale: "ru_RU",
+    siteName: "OrbitSafe",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "OrbitSafe VPN — Secure & Private Internet for Android",
+        alt: "OrbitSafe — Интернет-свобода для России",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "OrbitSafe VPN — Secure & Private Internet for Android",
-    description: "Encrypt your connection, hide your location, browse without being tracked. Now in closed testing on Google Play.",
+    title: "OrbitSafe — Интернет-свобода для России",
+    description: "Приватный доступ через Telegram-бота. Работает в России. 3 дня бесплатно.",
   },
   robots: {
     index: true,
@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <LanguageProvider>{children}</LanguageProvider>
       </body>

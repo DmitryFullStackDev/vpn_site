@@ -32,7 +32,7 @@ export function Footer() {
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-indigo-500 text-white shadow-lg shadow-indigo-500/25">
                 <ShieldIcon className="h-5 w-5" />
               </span>
-              OrbitSafe VPN
+              OrbitSafe
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-600">
               {t.footer.tagline}
@@ -76,7 +76,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
-          © {currentYear} OrbitSafe VPN. {t.footer.copyright}
+          © {currentYear} OrbitSafe. {t.footer.copyright}
         </div>
       </div>
     </footer>

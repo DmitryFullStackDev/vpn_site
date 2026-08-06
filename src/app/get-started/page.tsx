@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { GetStartedContent } from "./GetStartedContent";
 
 export const metadata: Metadata = {
-  title: "Get Started | OrbitSafe VPN",
+  title: "Как подключиться | OrbitSafe",
   description:
-    "Join the OrbitSafe VPN closed beta in three simple steps. Available on Android via Google Play.",
+    "Подключитесь к OrbitSafe через Telegram-бота за три простых шага. Первые 3 дня бесплатно.",
   openGraph: {
-    title: "Get Started | OrbitSafe VPN",
-    description: "Join the OrbitSafe VPN closed beta in three simple steps.",
+    title: "Как подключиться | OrbitSafe",
+    description: "Подключитесь к OrbitSafe через Telegram-бота за три простых шага.",
     type: "website",
   },
 };

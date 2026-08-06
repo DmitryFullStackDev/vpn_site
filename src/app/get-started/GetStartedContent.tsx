@@ -1,40 +1,13 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import { useState, useEffect, useCallback } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const GOOGLE_GROUP_URL = "https://groups.google.com/g/safeorbit-testers";
-const PLAY_STORE_URL =
-  "https://play.google.com/store/apps/details?id=com.dmitry_dev_react.safe_orbit_vpn";
+const TELEGRAM_BOT_URL = "https://t.me/safeOrbitVpnBot";
 
 export function GetStartedContent() {
-  const { t, locale } = useLanguage();
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
-
-  const joinSrc =
-    locale === "ru"
-      ? "/assets/safeorbit_join_ru.png"
-      : "/assets/safeorbit_join_en.png";
-
-  const installSrc =
-    locale === "ru"
-      ? "/assets/safeorbit_install_ru.png"
-      : "/assets/safeorbit_install_en.png";
-
-  const closeLightbox = useCallback(() => setLightboxSrc(null), []);
-
-  useEffect(() => {
-    if (!lightboxSrc) return;
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeLightbox();
-    };
-    document.addEventListener("keydown", handler);
-    return () => document.removeEventListener("keydown", handler);
-  }, [lightboxSrc, closeLightbox]);
+  const { t } = useLanguage();
 
   return (
     <>
@@ -72,23 +45,16 @@ export function GetStartedContent() {
                   <p className="mt-3 leading-relaxed text-slate-600">
                     {t.getStarted.step1.description}
                   </p>
-
-                  <ScreenshotThumbnail
-                    src={joinSrc}
-                    alt="Google Groups join screenshot"
-                    onClick={() => setLightboxSrc(joinSrc)}
-                  />
-
                   <div className="mt-6">
-                    <Link
-                      href={GOOGLE_GROUP_URL}
+                    <a
+                      href={TELEGRAM_BOT_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
                       {t.getStarted.step1.cta}
                       <ExternalLinkIcon className="h-4 w-4" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -105,24 +71,6 @@ export function GetStartedContent() {
                   <p className="mt-3 leading-relaxed text-slate-600">
                     {t.getStarted.step2.description}
                   </p>
-
-                  <ScreenshotThumbnail
-                    src={installSrc}
-                    alt="Google Play install screenshot"
-                    onClick={() => setLightboxSrc(installSrc)}
-                  />
-
-                  <div className="mt-6">
-                    <Link
-                      href={PLAY_STORE_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    >
-                      {t.getStarted.step2.cta}
-                      <ExternalLinkIcon className="h-4 w-4" />
-                    </Link>
-                  </div>
                 </div>
               </div>
 
@@ -145,70 +93,7 @@ export function GetStartedContent() {
         </section>
       </main>
       <Footer />
-
-      {/* Shared lightbox */}
-      {lightboxSrc && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm"
-          onClick={closeLightbox}
-        >
-          <div
-            className="relative mx-4 max-h-[90vh] max-w-[90vw]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={lightboxSrc}
-              alt="Screenshot full size"
-              className="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
-            />
-            <button
-              type="button"
-              onClick={closeLightbox}
-              className="absolute -top-3 -right-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-700 shadow-lg transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              aria-label="Close"
-            >
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
     </>
-  );
-}
-
-function ScreenshotThumbnail({
-  src,
-  alt,
-  onClick,
-}: {
-  src: string;
-  alt: string;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="group relative mt-5 block w-full overflow-hidden rounded-xl border border-slate-200 shadow-md transition hover:border-indigo-300 hover:shadow-indigo-500/10 cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-      aria-label="View screenshot full size"
-    >
-      <Image
-        src={src}
-        alt={alt}
-        width={1512}
-        height={780}
-        className="w-full rounded-xl"
-        priority
-      />
-      <div className="absolute inset-0 flex items-end justify-end bg-gradient-to-t from-slate-900/20 to-transparent p-3 opacity-0 transition-opacity group-hover:opacity-100">
-        <span className="flex items-center gap-1.5 rounded-lg bg-white/90 px-2.5 py-1.5 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur-sm">
-          <ExpandIcon className="h-3.5 w-3.5" />
-          Full size
-        </span>
-      </div>
-    </button>
   );
 }
 
@@ -232,14 +117,6 @@ function ExternalLinkIcon({ className }: { className?: string }) {
         strokeLinejoin="round"
         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
       />
-    </svg>
-  );
-}
-
-function ExpandIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
     </svg>
   );
 }

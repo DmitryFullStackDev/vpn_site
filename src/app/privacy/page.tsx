@@ -3,13 +3,13 @@ import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Политика конфиденциальности",
   description:
-    "OrbitSafe VPN privacy policy: what we collect, what we don’t, and how we protect your data.",
+    "Политика конфиденциальности OrbitSafe: что мы собираем, что не собираем и как защищаем ваши данные.",
   openGraph: {
-    title: "Privacy Policy | OrbitSafe VPN",
+    title: "Политика конфиденциальности | OrbitSafe",
     description:
-      "What OrbitSafe VPN collects, what we don’t collect (no browsing logs), and how we protect your data.",
+      "Что OrbitSafe собирает, что не собирает (без логов активности) и как защищает ваши данные.",
     type: "website",
   },
 };
@@ -21,185 +21,185 @@ export default function PrivacyPage() {
       <main className="min-h-screen bg-white">
         <section className="border-b border-slate-200/80 bg-gradient-to-b from-slate-50 to-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-slate-900">Privacy Policy</h1>
-            <p className="mt-3 text-slate-600">Last updated: April 16, 2026</p>
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900">Политика конфиденциальности</h1>
+            <p className="mt-3 text-slate-600">Последнее обновление: 16 апреля 2026 г.</p>
           </div>
         </section>
         <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <header className="sr-only">
-            <h1>Privacy Policy</h1>
+            <h1>Политика конфиденциальности</h1>
           </header>
           <div className="prose prose-slate max-w-none space-y-10 text-slate-700">
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">1. Introduction</h2>
+              <h2 className="text-xl font-semibold text-slate-900">1. Введение</h2>
               <p>
-                OrbitSafe VPN (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is a VPN service built to protect privacy and support a free and open internet. This Privacy Policy explains what information we collect, what we do not collect, how we use information, and the choices you have when you use our apps and website.
+                OrbitSafe (&laquo;мы&raquo;, &laquo;нас&raquo; или &laquo;наш&raquo;) — сервис, созданный для защиты приватности и поддержки свободного и открытого интернета. Настоящая Политика конфиденциальности объясняет, какую информацию мы собираем, что мы не собираем, как мы используем информацию и какой выбор есть у вас при использовании нашего сервиса и сайта.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">2. Core Principles</h2>
+              <h2 className="text-xl font-semibold text-slate-900">2. Основные принципы</h2>
               <ul className="list-disc pl-6 space-y-3">
                 <li>
-                  <strong>No activity logging:</strong> We do not collect or store your browsing history, DNS queries, traffic contents, or the destinations you connect to while using the VPN.
+                  <strong>Без логов активности:</strong> Мы не собираем и не храним историю браузера, DNS-запросы, содержимое трафика или адреса сайтов, к которым вы обращаетесь при подключении.
                 </li>
                 <li>
-                  <strong>Data minimization:</strong> We collect only the information that is necessary to operate the service, provide support, process subscriptions, and improve reliability.
+                  <strong>Минимизация данных:</strong> Мы собираем только информацию, необходимую для работы сервиса, поддержки, обработки подписок и повышения надёжности.
                 </li>
                 <li>
-                  <strong>Transparency:</strong> We aim to describe our practices clearly and update this policy when our service changes.
+                  <strong>Прозрачность:</strong> Мы стремимся чётко описывать наши практики и обновлять эту политику при изменении сервиса.
                 </li>
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">3. Data We Do Not Collect</h2>
-              <p>We do not collect, store, or sell the following:</p>
+              <h2 className="text-xl font-semibold text-slate-900">3. Данные, которые мы не собираем</h2>
+              <p>Мы не собираем, не храним и не продаём следующее:</p>
               <ul className="list-disc pl-6 space-y-1">
-                <li>Your browsing history</li>
-                <li>DNS queries</li>
-                <li>Traffic contents (the content of what you do online)</li>
-                <li>IP addresses of websites/services you access while connected</li>
-                <li>Your source IP address when you connect to the VPN service</li>
+                <li>Историю браузера</li>
+                <li>DNS-запросы</li>
+                <li>Содержимое трафика (данные о ваших действиях в сети)</li>
+                <li>IP-адреса сайтов и сервисов, к которым вы обращаетесь при подключении</li>
+                <li>Ваш исходный IP-адрес при подключении к сервису</li>
               </ul>
               <p className="mt-4">
-                We do not collect or store persistent VPN activity logs that can be used to identify individual user activity, such as browsing history, DNS queries, or traffic contents.
+                Мы не ведём постоянных логов активности, которые можно использовать для идентификации отдельных пользователей: историю браузера, DNS-запросы или содержимое трафика.
               </p>
               <p className="mt-4">
-                We may process minimal operational data such as connection timestamps (start and end time), which are not linked to browsing activity and are used solely for maintaining service functionality and preventing abuse.
+                Мы можем обрабатывать минимальные операционные данные, например временны́е метки подключения (начало и окончание сессии), которые не связаны с активностью браузера и используются исключительно для обеспечения работоспособности сервиса и предотвращения злоупотреблений.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">4. Data We Do Collect</h2>
-              <p>We may collect the following categories of information:</p>
+              <h2 className="text-xl font-semibold text-slate-900">4. Данные, которые мы собираем</h2>
+              <p>Мы можем собирать следующие категории информации:</p>
               <ul className="list-disc pl-6 space-y-3">
                 <li>
-                  <strong>Account information:</strong> If you create an account, we may collect your email address (or another identifier you provide) to manage access and communicate essential service messages.
+                  <strong>Данные аккаунта:</strong> если вы создаёте аккаунт, мы можем собирать ваш адрес электронной почты (или другой идентификатор, который вы указываете) для управления доступом и отправки важных сообщений о сервисе.
                 </li>
                 <li>
-                  <strong>Payment information:</strong> Subscription payments are processed by Google Play (and/or other store providers, if applicable). We do not receive or store your full payment card number. We may receive limited purchase information such as transaction status, product identifier, and timestamps related to the purchase.
+                  <strong>Платёжная информация:</strong> доступ к сервису предоставляется через наш Telegram-бот (@safeOrbitVpnBot). При покупке платной подписки платежи обрабатываются через наши платёжные системы. Мы не получаем и не храним полный номер вашей платёжной карты. Мы можем получать ограниченную информацию о покупке: статус транзакции, идентификатор продукта и временны́е метки, связанные с покупкой.
                 </li>
                 <li>
-                  <strong>Support communications:</strong> If you contact support, we receive the information you choose to share (for example, your email address and the content of your message) to resolve your request.
+                  <strong>Обращения в поддержку:</strong> если вы обращаетесь в поддержку, мы получаем информацию, которую вы решаете предоставить (например, адрес электронной почты и текст сообщения), для решения вашего вопроса.
                 </li>
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">5. Technical Privacy Measures</h2>
+              <h2 className="text-xl font-semibold text-slate-900">5. Технические меры защиты</h2>
               <ul className="list-disc pl-6 space-y-3">
                 <li>
-                  <strong>Strong encryption:</strong> We use modern VPN protocols (for example, WireGuard&reg;) to encrypt traffic between your device and our servers.
+                  <strong>Надёжное шифрование:</strong> мы используем современные протоколы шифрования (например, WireGuard&reg;) для защиты трафика между вашим устройством и нашими серверами.
                 </li>
                 <li>
-                  <strong>Operational safeguards:</strong> We design our systems to minimize data exposure and limit access to operational data to authorized personnel only.
+                  <strong>Операционные меры защиты:</strong> мы проектируем наши системы с целью минимизации раскрытия данных и ограничения доступа к операционным данным только для авторизованного персонала.
                 </li>
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">6. Website Operation and Cookies</h2>
+              <h2 className="text-xl font-semibold text-slate-900">6. Работа сайта и куки</h2>
               <p>
-                Our website may use cookies or similar technologies for essential functionality and optional analytics.
+                Наш сайт может использовать куки или аналогичные технологии для базовой функциональности и опциональной аналитики.
               </p>
               <ul className="list-disc pl-6 space-y-3">
                 <li>
-                  <strong>Optional analytics:</strong> We may measure anonymous site usage (for example, pages visited and time spent) to improve the website. Where possible, analytics are configured to avoid collecting identifying information.
+                  <strong>Опциональная аналитика:</strong> мы можем измерять анонимную посещаемость сайта (например, просмотренные страницы и время пребывания) для его улучшения. По возможности аналитика настроена так, чтобы избежать сбора идентифицирующей информации.
                 </li>
                 <li>
-                  <strong>Marketing measurement:</strong> If we run advertising campaigns, third-party providers may use pixels/tags to measure campaign performance. We do not provide these services with VPN activity data.
+                  <strong>Измерение рекламных кампаний:</strong> если мы проводим рекламные кампании, сторонние провайдеры могут использовать пиксели и теги для измерения эффективности. Мы не предоставляем этим сервисам данные об активности пользователей.
                 </li>
                 <li>
-                  <strong>Forms and anti-abuse:</strong> If we use CAPTCHA or anti-spam protection, those providers may collect data according to their own privacy policies.
+                  <strong>Формы и защита от злоупотреблений:</strong> если мы используем CAPTCHA или защиту от спама, соответствующие провайдеры могут собирать данные согласно своим политикам конфиденциальности.
                 </li>
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">7. Third-Party Services</h2>
+              <h2 className="text-xl font-semibold text-slate-900">7. Сторонние сервисы</h2>
               <p>
-                To operate the service and website, we may use third-party providers. These providers process data under their own privacy policies and our agreements with them.
+                Для работы сервиса и сайта мы можем использовать сторонних провайдеров. Они обрабатывают данные в соответствии с их собственными политиками конфиденциальности и нашими соглашениями с ними.
               </p>
               <ul className="list-disc pl-6 space-y-3">
                 <li>
-                  <strong>App stores &amp; payments:</strong> Google Play (and other app store providers, if applicable) processes purchases and subscriptions.
+                  <strong>Telegram:</strong> доступ к сервису предоставляется через Telegram-бота. Telegram обрабатывает взаимодействия с ботом согласно своей политике конфиденциальности.
                 </li>
                 <li>
-                  <strong>Support tooling:</strong> If we use a support platform (for example, a ticketing system), it may process your support messages and email address.
+                  <strong>Инструменты поддержки:</strong> если мы используем платформу поддержки (например, систему тикетов), она может обрабатывать ваши обращения и адрес электронной почты.
                 </li>
                 <li>
-                  <strong>Diagnostics/analytics:</strong> If enabled, tools may receive crash reports and aggregated product analytics (for example, error traces and app version).
+                  <strong>Диагностика и аналитика:</strong> при наличии соответствующих инструментов они могут получать отчёты об ошибках и агрегированную аналитику продукта.
                 </li>
                 <li>
-                  <strong>Infrastructure:</strong> Hosting, CDN, DNS, and security services may process basic request metadata for website delivery and protection (for example, IP addresses for web traffic to our site).
+                  <strong>Инфраструктура:</strong> хостинг, CDN, DNS и службы безопасности могут обрабатывать базовые метаданные запросов для доставки сайта и защиты (например, IP-адреса для веб-трафика на наш сайт).
                 </li>
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">8. Data Storage and Retention</h2>
+              <h2 className="text-xl font-semibold text-slate-900">8. Хранение данных</h2>
               <p>
-                We retain personal data only as long as needed for the purposes described above, including providing the service, complying with legal obligations, resolving disputes, and enforcing agreements.
+                Мы храним персональные данные только до тех пор, пока это необходимо для целей, описанных выше: предоставления сервиса, соблюдения юридических обязательств, разрешения споров и исполнения соглашений.
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong>Account data:</strong> stored while your account is active, and then deleted or anonymized within a reasonable period (unless a longer period is required by law).
+                  <strong>Данные аккаунта:</strong> хранятся, пока ваш аккаунт активен, затем удаляются или обезличиваются в разумные сроки (если законодательство не требует более длительного хранения).
                 </li>
                 <li>
-                  <strong>Support data:</strong> stored as long as necessary to resolve your request, then deleted or anonymized.
+                  <strong>Данные поддержки:</strong> хранятся столько, сколько необходимо для решения вашего вопроса, затем удаляются или обезличиваются.
                 </li>
                 <li>
-                  <strong>Diagnostic data:</strong> may be retained longer in aggregated/anonymized form for performance analysis.
+                  <strong>Диагностические данные:</strong> могут храниться дольше в агрегированной или обезличенной форме для анализа производительности.
                 </li>
                 <li>
-                  <strong>VPN activity logs:</strong> we do not keep browsing logs; therefore, there is no browsing history to retain or delete.
+                  <strong>Логи активности:</strong> мы не ведём логи браузера, поэтому история браузера не хранится и удалять нечего.
                 </li>
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">9. Your Rights</h2>
+              <h2 className="text-xl font-semibold text-slate-900">9. Ваши права</h2>
               <p>
-                Depending on where you live (for example, under GDPR or similar laws), you may have rights to access, correct, delete, or export your personal data, and to object to or restrict certain processing.
+                В зависимости от вашего места проживания (например, в соответствии с GDPR или аналогичным законодательством) у вас могут быть права на доступ, исправление, удаление или экспорт персональных данных, а также на возражение против определённых видов обработки или их ограничение.
               </p>
               <p className="mt-4">
-                You can submit requests using the contact details below. We may need to verify your identity before processing certain requests.
+                Вы можете подать запрос, используя контактные данные ниже. Для обработки некоторых запросов нам может потребоваться подтверждение вашей личности.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">10. Data Sharing</h2>
+              <h2 className="text-xl font-semibold text-slate-900">10. Передача данных третьим лицам</h2>
               <p>
-                We do not sell your personal data. We may share limited information only in the following cases:
+                Мы не продаём ваши персональные данные. Мы можем передавать ограниченную информацию только в следующих случаях:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong>Service providers:</strong> with vendors that help us run the service (e.g., payment processors/app stores, support tooling, hosting/security providers), under confidentiality and data protection obligations.
+                  <strong>Поставщики услуг:</strong> вендорам, которые помогают нам работать (например, платёжным системам, инструментам поддержки, хостинг- и охранным провайдерам), в рамках соглашений о конфиденциальности и защите данных.
                 </li>
                 <li>
-                  <strong>Legal requirements:</strong> if required by law, regulation, or valid legal process. If we receive a request, we respond only with the information we have.
+                  <strong>Юридические требования:</strong> если это требуется законом, нормативными актами или действующим судебным решением. При получении запроса мы отвечаем только той информацией, которой располагаем.
                 </li>
                 <li>
-                  <strong>Safety and abuse:</strong> to protect users, prevent fraud/abuse, and maintain the security of our systems.
+                  <strong>Безопасность и злоупотребления:</strong> для защиты пользователей, предотвращения мошенничества и злоупотреблений, а также обеспечения безопасности наших систем.
                 </li>
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">11. Jurisdiction and Server Locations</h2>
+              <h2 className="text-xl font-semibold text-slate-900">11. Юрисдикция и расположение серверов</h2>
               <p>
-                OrbitSafe VPN operates from jurisdictions and vendors that may process data in different countries. Where applicable, we use appropriate safeguards for international data transfers as required by law.
+                OrbitSafe работает в юрисдикциях и с вендорами, которые могут обрабатывать данные в разных странах. При необходимости мы применяем соответствующие меры защиты для международных передач данных в соответствии с законодательством.
               </p>
-              <p className="mt-4">Our VPN server infrastructure is currently located in:</p>
+              <p className="mt-4">Наша серверная инфраструктура расположена в:</p>
               <ul className="list-disc pl-6 space-y-1 mt-2">
-                <li>New York, United States</li>
-                <li>Frankfurt, Germany</li>
-                <li>Amsterdam, Netherlands</li>
+                <li>Нью-Йорк, США</li>
+                <li>Франкфурт, Германия</li>
+                <li>Амстердам, Нидерланды</li>
               </ul>
               <p className="mt-4">
-                User data required for service operation (such as account information) may be processed in these locations or in other jurisdictions where our infrastructure providers operate, in accordance with applicable data protection laws.
+                Пользовательские данные, необходимые для работы сервиса (например, данные аккаунта), могут обрабатываться в этих локациях или в других юрисдикциях, где работают наши инфраструктурные провайдеры, в соответствии с применимым законодательством о защите данных.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">12. Changes to This Policy</h2>
+              <h2 className="text-xl font-semibold text-slate-900">12. Изменения в настоящей политике</h2>
               <p>
-                We may update this Privacy Policy from time to time. We will post the updated policy on this page and update the &quot;Last updated&quot; date. If changes are significant, we may provide additional notice (for example, in-app or by email).
+                Мы можем периодически обновлять настоящую Политику конфиденциальности. Обновлённая версия будет опубликована на этой странице с изменённой датой &laquo;Последнего обновления&raquo;. При существенных изменениях мы можем дополнительно уведомить вас (например, по электронной почте).
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">13. Contact</h2>
-              <p>For privacy questions or data requests, contact us at:</p>
+              <h2 className="text-xl font-semibold text-slate-900">13. Контакты</h2>
+              <p>По вопросам конфиденциальности или запросам о данных обращайтесь:</p>
               <p className="mt-2">
                 <a
                   href="mailto:privacy@safeorbitvpn.com"

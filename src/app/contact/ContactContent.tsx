@@ -57,7 +57,7 @@ export function ContactContent() {
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
                   {t.contact.companyLabel}
                 </h3>
-                <p className="mt-2 font-semibold text-slate-900">OrbitSafe VPN</p>
+                <p className="mt-2 font-semibold text-slate-900">OrbitSafe</p>
                 <p className="mt-1 text-sm text-slate-600">
                   {t.contact.companyTagline}
                 </p>

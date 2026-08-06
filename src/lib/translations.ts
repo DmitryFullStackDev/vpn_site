@@ -13,25 +13,25 @@ export const translations = {
       termsOfService: "Terms of Service",
     },
     hero: {
-      badge: "Now in closed testing on Android",
-      heading: "Privacy that travels with you",
+      badge: "3 days free trial",
+      heading: "Internet freedom for Russia",
       subheading:
-        "OrbitSafe VPN — secure, fast, and simple. One tap to a safer internet on your Android device.",
+        "OrbitSafe — works in Russia. Connect via Telegram bot in 1 minute.",
       description:
-        "Encrypt your connection, hide your location, and browse without being tracked. Built for Android with a focus on speed and ease of use.",
-      cta: "Join Closed Testing on Google Play",
+        "Encrypt your connection, access any website, and browse without limits. Works on any device.",
+      cta: "Open bot in Telegram",
     },
     home: {
       benefits: {
         badge: "Why choose us",
-        heading: "Why choose OrbitSafe VPN?",
+        heading: "Why choose OrbitSafe?",
         subheading:
           "Built for simplicity and trust. Here's what you get with every connection.",
         items: [
           {
-            title: "Secure VPN connection",
+            title: "Secure connection",
             description:
-              "ChaCha20-Poly1305 encryption keeps your data safe on any network—public Wi‑Fi, cellular, or home. Fast, modern, and built for mobile.",
+              "ChaCha20-Poly1305 encryption keeps your data safe on any network — public Wi‑Fi, cellular, or home. Fast, modern, and reliable.",
           },
           {
             title: "Key server locations",
@@ -54,62 +54,61 @@ export const translations = {
         badge: "Simple steps",
         heading: "How it works",
         subheading:
-          "Three simple steps to a safer internet on your Android device.",
+          "Three simple steps to unrestricted internet.",
         steps: [
           {
-            title: "Download",
-            text: "Join the closed testing program on Google Play.",
+            title: "Open the bot",
+            text: "Go to Telegram and open @safeOrbitVpnBot.",
+          },
+          {
+            title: "Get access",
+            text: "The bot will send you a configuration to connect. First 3 days are free.",
           },
           {
             title: "Connect",
-            text: "Open the app and tap one button to secure your connection.",
-          },
-          {
-            title: "Browse",
-            text: "Use the internet with confidence on any network.",
+            text: "Import the config into WireGuard and browse without limits.",
           },
         ],
       },
       security: {
         badge: "Security",
         heading: "Security you can trust",
-        body: "OrbitSafe VPN uses industry-standard protocols and encryption. Your traffic is encrypted end-to-end through our secure servers, so ISPs, advertisers, and bad actors can't see what you're doing online. We're committed to transparency: our privacy policy and practices are clear and easy to understand.",
+        body: "OrbitSafe uses industry-standard protocols and encryption. Your traffic is encrypted end-to-end through our secure servers, so ISPs, advertisers, and bad actors can't see what you're doing online. We're committed to transparency: our privacy policy and practices are clear and easy to understand.",
       },
       faq: {
         badge: "Support",
         heading: "Frequently asked questions",
         subheading:
-          "Quick answers to common questions about OrbitSafe VPN.",
+          "Quick answers to common questions about OrbitSafe.",
         items: [
           {
-            question: "What is OrbitSafe VPN?",
+            question: "Does the service work in Russia?",
             answer:
-              "OrbitSafe VPN is an Android app that creates a secure, encrypted tunnel between your device and the internet. It hides your IP address and protects your data on public and private networks.",
+              "Yes. OrbitSafe is specifically configured to provide access to any website in Russia and works reliably with Russian ISPs.",
           },
           {
-            question: "How can I try OrbitSafe VPN?",
+            question: "How do I get started?",
             answer:
-              "OrbitSafe VPN is currently in closed testing on Google Play.",
-            answerLinkText: "Follow our step-by-step guide",
-            answerSuffix:
-              "to join the testing program and get early access before the public launch.",
+              "Open @safeOrbitVpnBot in Telegram and follow the bot's instructions — it will send you a configuration.",
+            answerLinkText: "See the step-by-step guide",
+            answerSuffix: "if you need help.",
+          },
+          {
+            question: "What does the free trial include?",
+            answer:
+              "The first 3 days are completely free — full access to all servers with no restrictions.",
           },
           {
             question: "Do you keep logs of my activity?",
             answer:
               "No. We follow a strict no-logging policy. We don't store your browsing history, connection timestamps tied to your identity, or any data that could be used to identify what you do online.",
           },
-          {
-            question: "Is OrbitSafe VPN only for Android?",
-            answer:
-              "Our first release is for Android. We're focused on delivering a great experience on Android devices. Other platforms may be considered in the future.",
-          },
         ],
       },
     },
     footer: {
       tagline:
-        "Secure, private internet for Android. Now in closed testing on Google Play.",
+        "Private access via Telegram bot. Works in Russia. 3 days free.",
       product: "Product",
       legal: "Legal",
       company: "Company",
@@ -127,12 +126,12 @@ export const translations = {
       badge: "Features",
       heading: "Built for security and simplicity",
       subheading:
-        "Every feature is designed to keep you private and in control—without getting in your way.",
+        "Every feature is designed to keep you private and in control — without getting in your way.",
       items: [
         {
-          title: "Secure VPN connection",
+          title: "Secure connection",
           description:
-            "Every connection is protected with ChaCha20-Poly1305 encryption—a modern cipher optimized for speed on mobile hardware. Your data stays private on public Wi‑Fi, at home, or on cellular.",
+            "Every connection is protected with ChaCha20-Poly1305 encryption — a modern cipher optimized for speed. Your data stays private on public Wi‑Fi, at home, or on cellular.",
         },
         {
           title: "Key server locations",
@@ -147,12 +146,12 @@ export const translations = {
         {
           title: "No logging policy",
           description:
-            "We don't store logs of your browsing history, DNS queries, or traffic. Our no-logging policy is at the core of what we build—your activity is your business only.",
+            "We don't store logs of your browsing history, DNS queries, or traffic. Our no-logging policy is at the core of what we build — your activity is your business only.",
         },
         {
-          title: "Easy one-tap connect",
+          title: "Simple connection via bot",
           description:
-            "No complicated setup. Open the app, tap connect, and you're protected. Perfect for everyday users who want security without the hassle.",
+            "No complicated setup. Get your config through the Telegram bot, import it into WireGuard — and you're protected. Perfect for everyday users who want security without the hassle.",
         },
       ],
     },
@@ -167,29 +166,29 @@ export const translations = {
       privacyLegal: "Privacy & legal:",
       companyLabel: "Company",
       companyTagline:
-        "Secure, private internet for Android. Now in closed testing on Google Play.",
+        "Private internet access via Telegram bot. Works in Russia.",
     },
     getStarted: {
-      badge: "Early Access",
-      heading: "How to become a tester",
+      badge: "Getting started",
+      heading: "How to connect",
       subheading:
-        "Get early access to OrbitSafe VPN in three simple steps. It takes less than two minutes.",
+        "Three simple steps to unrestricted internet. Takes less than a minute.",
       step1: {
-        title: "Join the testers group",
+        title: "Open the Telegram bot",
         description:
-          "Click the button below to open our Google Group page, then click Join (see the screenshot below). This will automatically add you to the approved testers list.",
-        cta: "Join the testers group",
+          "Click the button below to open @safeOrbitVpnBot in Telegram and get started.",
+        cta: "Open the bot",
       },
       step2: {
-        title: "Install OrbitSafe VPN",
+        title: "Get your configuration",
         description:
-          "Open the Play Store page and tap \"Install\". If the page is found, wait a few minutes for access to activate and try again.",
-        cta: "Open on Google Play",
+          "Follow the bot's instructions. It will send you a configuration file. The first 3 days are free, with no restrictions.",
+        cta: "Open the bot",
       },
       step3: {
-        title: "Open OrbitSafe VPN",
+        title: "Connect",
         description:
-          "Open OrbitSafe VPN on your Android and try our VPN.",
+          "Import the configuration into WireGuard or another client and enjoy unrestricted internet.",
       },
     },
   },
@@ -206,25 +205,25 @@ export const translations = {
       termsOfService: "Условия использования",
     },
     hero: {
-      badge: "Сейчас в закрытом тестировании на Android",
-      heading: "Приватность, которая всегда с тобой",
+      badge: "3 дня бесплатно",
+      heading: "Свобода в интернете для России",
       subheading:
-        "OrbitSafe VPN — безопасный, быстрый и простой. Одно нажатие — и ваш Android под защитой.",
+        "OrbitSafe — работает в России. Подключайтесь через Telegram-бота за 1 минуту.",
       description:
-        "Шифруйте соединение, скрывайте местоположение и работайте в сети без слежки. Создан для Android с упором на скорость и удобство.",
-      cta: "Присоединиться к тестированию в Google Play",
+        "Шифруйте трафик, открывайте любые сайты и пользуйтесь интернетом без ограничений. Работает на любом устройстве.",
+      cta: "Открыть бота в Telegram",
     },
     home: {
       benefits: {
         badge: "Почему мы",
-        heading: "Почему стоит выбрать OrbitSafe VPN?",
+        heading: "Почему стоит выбрать OrbitSafe?",
         subheading:
           "Создан для простоты и надёжности. Вот что вы получаете с каждым подключением.",
         items: [
           {
-            title: "Защищённое VPN-соединение",
+            title: "Защищённое соединение",
             description:
-              "Шифрование ChaCha20-Poly1305 защищает ваши данные в любой сети — публичный Wi‑Fi, мобильная или домашняя. Быстро, современно, создано для мобильных.",
+              "Шифрование ChaCha20-Poly1305 защищает ваши данные в любой сети — публичный Wi‑Fi, мобильная или домашняя. Быстро, современно, надёжно.",
           },
           {
             title: "Ключевые серверные локации",
@@ -247,62 +246,62 @@ export const translations = {
         badge: "Просто",
         heading: "Как это работает",
         subheading:
-          "Три простых шага к более безопасному интернету на вашем Android.",
+          "Три простых шага — и вы в сети без ограничений.",
         steps: [
           {
-            title: "Скачать",
-            text: "Присоединяйтесь к программе закрытого тестирования на Google Play.",
+            title: "Открыть бота",
+            text: "Перейдите в Telegram и откройте @safeOrbitVpnBot.",
+          },
+          {
+            title: "Получить доступ",
+            text: "Бот выдаст конфигурацию для подключения. Первые 3 дня — бесплатно.",
           },
           {
             title: "Подключиться",
-            text: "Откройте приложение и нажмите одну кнопку, чтобы защитить соединение.",
-          },
-          {
-            title: "Пользоваться",
-            text: "Работайте в интернете уверенно в любой сети.",
+            text: "Импортируйте конфиг в WireGuard и пользуйтесь интернетом без ограничений.",
           },
         ],
       },
       security: {
         badge: "Безопасность",
         heading: "Безопасность, которой можно доверять",
-        body: "OrbitSafe VPN использует стандартные отраслевые протоколы и шифрование. Ваш трафик шифруется от конца до конца через наши защищённые серверы, поэтому провайдеры, рекламодатели и злоумышленники не видят, что вы делаете в сети. Мы придерживаемся принципа прозрачности: наша политика конфиденциальности и практики понятны и просты для восприятия.",
+        body: "OrbitSafe использует стандартные отраслевые протоколы и шифрование. Ваш трафик шифруется от конца до конца через наши защищённые серверы, поэтому провайдеры, рекламодатели и злоумышленники не видят, что вы делаете в сети. Мы придерживаемся принципа прозрачности: наша политика конфиденциальности и практики понятны и просты для восприятия.",
       },
       faq: {
         badge: "Поддержка",
         heading: "Часто задаваемые вопросы",
         subheading:
-          "Быстрые ответы на распространённые вопросы об OrbitSafe VPN.",
+          "Быстрые ответы на распространённые вопросы об OrbitSafe.",
         items: [
           {
-            question: "Что такое OrbitSafe VPN?",
+            question: "Работает ли сервис в России?",
             answer:
-              "OrbitSafe VPN — это приложение для Android, которое создаёт зашифрованный туннель между вашим устройством и интернетом. Оно скрывает ваш IP-адрес и защищает данные в публичных и частных сетях.",
+              "Да. OrbitSafe специально настроен для свободного доступа к любым сайтам в России и стабильно работает с российскими провайдерами.",
           },
           {
-            question: "Как попробовать OrbitSafe VPN?",
+            question: "Как начать пользоваться?",
             answer:
-              "OrbitSafe VPN сейчас находится в закрытом тестировании на Google Play.",
-            answerLinkText: "Следуйте нашей пошаговой инструкции,",
+              "Откройте @safeOrbitVpnBot в Telegram и следуйте инструкциям бота — он выдаст вам конфигурацию.",
+            answerLinkText: "Посмотрите пошаговую инструкцию",
             answerSuffix:
-              "чтобы вступить в программу тестирования и получить ранний доступ.",
+              "если нужна дополнительная помощь.",
+          },
+          {
+            question: "Что включает пробный период?",
+            answer:
+              "Первые 3 дня — полностью бесплатно и без ограничений. Полный доступ ко всем серверам.",
           },
           {
             question: "Вы ведёте логи моей активности?",
             answer:
               "Нет. Мы придерживаемся строгой политики без логов. Мы не храним историю браузера, временные метки подключений, связанные с вашей личностью, или данные, по которым можно идентифицировать ваши действия в сети.",
           },
-          {
-            question: "OrbitSafe VPN только для Android?",
-            answer:
-              "Первый релиз предназначен для Android. Мы сосредоточены на обеспечении отличного пользовательского опыта на Android-устройствах. Другие платформы могут быть рассмотрены в будущем.",
-          },
         ],
       },
     },
     footer: {
       tagline:
-        "Безопасный, приватный интернет для Android. Сейчас в закрытом тестировании на Google Play.",
+        "Приватный доступ через Telegram-бота. Работает в России. 3 дня бесплатно.",
       product: "Продукт",
       legal: "Правовая информация",
       company: "Компания",
@@ -323,9 +322,9 @@ export const translations = {
         "Каждая функция создана, чтобы сохранить вашу приватность и контроль — ненавязчиво.",
       items: [
         {
-          title: "Защищённое VPN-соединение",
+          title: "Защищённое соединение",
           description:
-            "Каждое соединение защищено шифрованием ChaCha20-Poly1305 — современным шифром, оптимизированным для скорости на мобильных устройствах. Ваши данные в безопасности в Wi‑Fi, дома или в мобильной сети.",
+            "Каждое соединение защищено шифрованием ChaCha20-Poly1305 — современным шифром, оптимизированным для скорости. Ваши данные в безопасности в Wi‑Fi, дома или в мобильной сети.",
         },
         {
           title: "Ключевые серверные локации",
@@ -343,9 +342,9 @@ export const translations = {
             "Мы не храним логи истории браузера, DNS-запросов или трафика. Политика без логов — основа нашей работы: ваши действия — только ваше дело.",
         },
         {
-          title: "Подключение одним нажатием",
+          title: "Простое подключение",
           description:
-            "Никакой сложной настройки. Откройте приложение, нажмите «Подключить» — и вы под защитой. Идеально для тех, кто хочет безопасности без лишних сложностей.",
+            "Никакой сложной настройки. Получите конфигурацию через Telegram-бота, импортируйте в WireGuard — и вы под защитой. Идеально для тех, кто хочет безопасности без лишних сложностей.",
         },
       ],
     },
@@ -360,29 +359,29 @@ export const translations = {
       privacyLegal: "Конфиденциальность и правовые вопросы:",
       companyLabel: "Компания",
       companyTagline:
-        "Безопасный, приватный интернет для Android. Сейчас в закрытом тестировании на Google Play.",
+        "Приватный доступ в интернет через Telegram-бота. Работает в России.",
     },
     getStarted: {
-      badge: "Ранний доступ",
-      heading: "Как стать тестировщиком",
+      badge: "Начало работы",
+      heading: "Как подключиться",
       subheading:
-        "Получите ранний доступ к OrbitSafe VPN за три простых шага. Это займёт меньше двух минут.",
+        "Три простых шага — и вы в сети без ограничений. Займёт меньше минуты.",
       step1: {
-        title: "Вступить в группу тестировщиков",
+        title: "Открыть Telegram-бота",
         description:
-          "Нажмите кнопку ниже, чтобы вступить в нашу Google Group, на открывшейся странице нажмите на присоединиться (смотрите скриншот внизу). Это автоматически добавит вас в список одобренных тестировщиков.",
-        cta: "Вступить в группу",
+          "Нажмите кнопку ниже, чтобы открыть @safeOrbitVpnBot в Telegram и начать.",
+        cta: "Открыть бота",
       },
       step2: {
-        title: "Установить OrbitSafe VPN",
+        title: "Получить конфигурацию",
         description:
-          "Откройте страницу в Play Store и нажмите «Установить». Если страница найдена, то подождите несколько минут, пока появится доступ и попробуйте снова.",
-        cta: "Открыть в Google Play",
+          "Следуйте инструкциям бота. Он выдаст вам файл конфигурации. Первые 3 дня — бесплатно, без ограничений.",
+        cta: "Открыть бота",
       },
       step3: {
-        title: "Открыть OrbitSafe VPN",
+        title: "Подключиться",
         description:
-          "Откройте OrbitSafe VPN на вашем Android и попробуйте наш VPN.",
+          "Импортируйте конфигурацию в WireGuard или другой клиент и пользуйтесь интернетом без ограничений.",
       },
     },
   },

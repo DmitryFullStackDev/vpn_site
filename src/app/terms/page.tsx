@@ -3,12 +3,12 @@ import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Условия использования",
   description:
-    "OrbitSafe VPN terms of service: acceptable use, subscriptions, service limitations, and legal terms.",
+    "Условия использования OrbitSafe: допустимое использование, подписки, ограничения сервиса и правовые условия.",
   openGraph: {
-    title: "Terms of Service | OrbitSafe VPN",
-    description: "Terms of use for OrbitSafe VPN. Acceptable use, subscriptions, and limitations.",
+    title: "Условия использования | OrbitSafe",
+    description: "Условия использования OrbitSafe. Допустимое использование, подписки и ограничения.",
     type: "website",
   },
 };
@@ -20,163 +20,118 @@ export default function TermsPage() {
       <main className="min-h-screen bg-white">
         <section className="border-b border-slate-200/80 bg-gradient-to-b from-slate-50 to-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-slate-900">Terms of Service</h1>
-            <p className="mt-3 text-slate-600">Last updated: April 15, 2026</p>
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900">Условия использования</h1>
+            <p className="mt-3 text-slate-600">Последнее обновление: 15 апреля 2026 г.</p>
           </div>
         </section>
         <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <header className="sr-only">
-            <h1>Terms of Service</h1>
+            <h1>Условия использования</h1>
           </header>
           <div className="prose prose-slate max-w-none space-y-10 text-slate-700">
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">1. Agreement to Terms</h2>
+              <h2 className="text-xl font-semibold text-slate-900">1. Принятие условий</h2>
               <p>
-                These Terms of Service (&quot;Terms&quot;) govern your access to and use of OrbitSafe VPN (the
-                &quot;Service&quot;), including our apps, websites, and related features. By downloading,
-                installing, accessing, or using the Service, you agree to these Terms. If you do not
-                agree, do not use the Service.
+                Настоящие Условия использования (&laquo;Условия&raquo;) регулируют ваш доступ и использование OrbitSafe (&laquo;Сервис&raquo;), включая наш сайт и связанные функции. Получая доступ к Сервису или используя его, вы соглашаетесь с настоящими Условиями. Если вы не согласны, не используйте Сервис.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">2. Eligibility and Accounts</h2>
+              <h2 className="text-xl font-semibold text-slate-900">2. Требования и аккаунты</h2>
               <p>
-                You must be legally able to enter into a binding agreement in your jurisdiction to use
-                the Service. If you create an account, you agree to provide accurate information and
-                to keep it up to date. You are responsible for maintaining the confidentiality of your
-                credentials and for all activity that occurs under your account.
+                Для использования Сервиса вы должны быть вправе заключать обязательный договор в вашей юрисдикции. Если вы создаёте аккаунт, вы обязуетесь предоставлять точные данные и поддерживать их актуальность. Вы несёте ответственность за сохранение конфиденциальности своих учётных данных и за все действия, совершённые в вашем аккаунте.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">3. Description of the Service</h2>
+              <h2 className="text-xl font-semibold text-slate-900">3. Описание Сервиса</h2>
               <p>
-                OrbitSafe VPN provides a virtual private network (VPN) service that encrypts network
-                traffic between your device and our servers. The Service may include features such as
-                server selection, protocol options, and privacy/security tools. Availability, features,
-                and performance may vary by region, platform, and network conditions and may change
-                over time.
+                OrbitSafe предоставляет сервис зашифрованного доступа в интернет, который обеспечивает безопасное соединение между вашим устройством и нашими серверами. Сервис может включать такие функции, как выбор сервера, настройки протокола и инструменты безопасности. Доступность, функции и производительность могут различаться в зависимости от региона, платформы и условий сети, а также могут меняться со временем.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">4. Acceptable Use</h2>
-              <p>You agree to use the Service only for lawful purposes. You must not:</p>
+              <h2 className="text-xl font-semibold text-slate-900">4. Допустимое использование</h2>
+              <p>Вы соглашаетесь использовать Сервис только в законных целях. Вам запрещено:</p>
               <ul className="list-disc pl-6 space-y-1">
-                <li>Violate applicable laws, regulations, or third-party rights</li>
-                <li>Use the Service for illegal activities, fraud, or harm to others</li>
-                <li>Distribute malware, spam, or engage in phishing or abusive behavior</li>
-                <li>Attempt to gain unauthorized access to systems, accounts, or networks</li>
-                <li>Interfere with or disrupt the Service or our infrastructure</li>
-                <li>Reverse engineer, circumvent, or attempt to defeat security or access controls</li>
-                <li>Resell, sublicense, or redistribute the Service unless we expressly allow it in writing</li>
+                <li>Нарушать применимые законы, нормативные акты или права третьих лиц</li>
+                <li>Использовать Сервис для незаконной деятельности, мошенничества или причинения вреда другим лицам</li>
+                <li>Распространять вредоносное ПО, рассылать спам или заниматься фишингом и злоупотреблениями</li>
+                <li>Пытаться получить несанкционированный доступ к системам, аккаунтам или сетям</li>
+                <li>Нарушать работу Сервиса или нашей инфраструктуры</li>
+                <li>Осуществлять обратную разработку, обходить или пытаться преодолеть средства защиты и контроля доступа</li>
+                <li>Перепродавать, сублицензировать или передавать Сервис без нашего явного письменного согласия</li>
               </ul>
               <p className="mt-4">
-                We may suspend or terminate access if we reasonably believe you violated these Terms,
-                abused the Service, or created risk for us, other users, or third parties.
+                Мы можем приостановить или прекратить доступ, если у нас есть обоснованные основания полагать, что вы нарушили настоящие Условия, злоупотребили Сервисом или создали риск для нас, других пользователей или третьих лиц.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">5. Subscriptions, Billing, and Refunds</h2>
+              <h2 className="text-xl font-semibold text-slate-900">5. Подписки, оплата и возврат средств</h2>
               <p>
-                Some features may require a paid subscription. If you purchase a subscription through an
-                app store (such as Google Play), billing, renewals, cancellations, and refunds are handled by
-                that store and subject to its terms and policies. Subscriptions typically auto-renew
-                unless canceled before the end of the current billing period.
+                Некоторые функции могут требовать платной подписки. Доступ к Сервису предоставляется через наш Telegram-бот (@safeOrbitVpnBot). При оформлении подписки условия оплаты будут сообщены в момент покупки. Подписки могут автоматически продлеваться, если отмена не произведена до окончания текущего расчётного периода.
               </p>
               <p className="mt-4">
-                We do not store your full payment card number. We may receive limited purchase metadata
-                (for example, product identifier and payment status) to provide access and support.
+                Мы не храним полный номер вашей платёжной карты. Мы можем получать ограниченные метаданные о покупке (например, идентификатор продукта и статус платежа) для предоставления доступа и поддержки.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">6. Service Availability and Limitations</h2>
+              <h2 className="text-xl font-semibold text-slate-900">6. Доступность и ограничения Сервиса</h2>
               <p>
-                The Service is provided on an &quot;as is&quot; and &quot;as available&quot; basis. We do not guarantee
-                that the Service will be uninterrupted, secure, error-free, or available in all locations
-                or on all networks. Speeds, latency, and performance depend on many factors outside our
-                control.
+                Сервис предоставляется &laquo;как есть&raquo; и &laquo;по мере доступности&raquo;. Мы не гарантируем бесперебойную, безопасную, безошибочную работу или доступность во всех регионах и сетях. Скорость, задержка и производительность зависят от многих факторов, находящихся вне нашего контроля.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">7. Intellectual Property</h2>
+              <h2 className="text-xl font-semibold text-slate-900">7. Интеллектуальная собственность</h2>
               <p>
-                The Service, including our software, designs, trademarks, logos, and content, is owned by
-                OrbitSafe VPN or its licensors and is protected by intellectual property laws. We grant you
-                a limited, non-exclusive, non-transferable, revocable license to use the Service for your
-                personal, non-commercial use, subject to these Terms.
+                Сервис, включая наше программное обеспечение, дизайн, торговые марки, логотипы и контент, принадлежит OrbitSafe или его лицензиарам и защищён законами об интеллектуальной собственности. Мы предоставляем вам ограниченную, неисключительную, непередаваемую, отзывную лицензию на использование Сервиса в личных некоммерческих целях в соответствии с настоящими Условиями.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">8. Third-Party Services and Content</h2>
+              <h2 className="text-xl font-semibold text-slate-900">8. Сторонние сервисы и контент</h2>
               <p>
-                The Service may interact with third-party services (for example, app stores, payment
-                providers, analytics/diagnostics providers, and external websites). We are not responsible
-                for third-party services, their content, or their policies. Your use of third-party
-                services is subject to their terms.
+                Сервис может взаимодействовать со сторонними сервисами (например, платёжными системами, аналитическими провайдерами и внешними сайтами). Мы не несём ответственности за сторонние сервисы, их контент или политики. Использование вами сторонних сервисов регулируется их условиями.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">9. Disclaimer of Warranties</h2>
+              <h2 className="text-xl font-semibold text-slate-900">9. Отказ от гарантий</h2>
               <p>
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICE IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot;
-                WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING IMPLIED
-                WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE
-                DO NOT WARRANT THAT THE SERVICE WILL BE SECURE, UNINTERRUPTED, OR ERROR-FREE.
+                В МАКСИМАЛЬНО ДОПУСТИМОЙ ЗАКОНОМ МЕРЕ СЕРВИС ПРЕДОСТАВЛЯЕТСЯ &laquo;КАК ЕСТЬ&raquo; И &laquo;ПО МЕРЕ ДОСТУПНОСТИ&raquo; БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ ГАРАНТИИ ТОВАРНОЙ ПРИГОДНОСТИ, ПРИГОДНОСТИ ДЛЯ КОНКРЕТНОЙ ЦЕЛИ И НЕНАРУШЕНИЯ ПРАВ. МЫ НЕ ГАРАНТИРУЕМ БЕЗОПАСНОСТЬ, БЕСПЕРЕБОЙНОСТЬ ИЛИ ОТСУТСТВИЕ ОШИБОК В РАБОТЕ СЕРВИСА.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">10. Limitation of Liability</h2>
+              <h2 className="text-xl font-semibold text-slate-900">10. Ограничение ответственности</h2>
               <p>
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, ORBITSAFE VPN AND ITS AFFILIATES, OFFICERS,
-                EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
-                CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL,
-                ARISING OUT OF OR RELATED TO YOUR USE OF (OR INABILITY TO USE) THE SERVICE.
+                В МАКСИМАЛЬНО ДОПУСТИМОЙ ЗАКОНОМ МЕРЕ ORBITSAFE И ЕГО АФФИЛИАТЫ, ДОЛЖНОСТНЫЕ ЛИЦА, СОТРУДНИКИ И АГЕНТЫ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА КОСВЕННЫЕ, СЛУЧАЙНЫЕ, СПЕЦИАЛЬНЫЕ, СЛЕДСТВЕННЫЕ ИЛИ ШТРАФНЫЕ УБЫТКИ, А ТАКЖЕ ПОТЕРЮ ПРИБЫЛИ, ДАННЫХ ИЛИ ДЕЛОВОЙ РЕПУТАЦИИ, ВОЗНИКАЮЩИЕ В СВЯЗИ С ИСПОЛЬЗОВАНИЕМ (ИЛИ НЕВОЗМОЖНОСТЬЮ ИСПОЛЬЗОВАНИЯ) СЕРВИСА.
               </p>
               <p className="mt-4">
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL LIABILITY FOR ANY CLAIMS ARISING OUT OF
-                OR RELATED TO THE SERVICE WILL NOT EXCEED THE AMOUNT YOU PAID FOR THE SERVICE IN THE
-                TWELVE (12) MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM, OR USD $100, WHICHEVER IS
-                GREATER. SOME JURISDICTIONS DO NOT ALLOW CERTAIN LIMITATIONS; IN SUCH CASES, THESE
-                LIMITATIONS MAY NOT APPLY TO YOU.
+                В МАКСИМАЛЬНО ДОПУСТИМОЙ ЗАКОНОМ МЕРЕ НАША СОВОКУПНАЯ ОТВЕТСТВЕННОСТЬ ПО ЛЮБЫМ ПРЕТЕНЗИЯМ, СВЯЗАННЫМ С СЕРВИСОМ, НЕ ПРЕВЫСИТ СУММУ, УПЛАЧЕННУЮ ВАМИ ЗА СЕРВИС В ТЕЧЕНИЕ ДВЕНАДЦАТИ (12) МЕСЯЦЕВ ДО СОБЫТИЯ, ПОСЛУЖИВШЕГО ОСНОВАНИЕМ ДЛЯ ПРЕТЕНЗИИ, ИЛИ 100 USD — В ЗАВИСИМОСТИ ОТ ТОГО, КАКАЯ СУММА БОЛЬШЕ. В НЕКОТОРЫХ ЮРИСДИКЦИЯХ ОПРЕДЕЛЁННЫЕ ОГРАНИЧЕНИЯ НЕ ДОПУСКАЮТСЯ; В ТАКИХ СЛУЧАЯХ ЭТИ ОГРАНИЧЕНИЯ МОГУТ НЕ ПРИМЕНЯТЬСЯ К ВАМ.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">11. Indemnification</h2>
+              <h2 className="text-xl font-semibold text-slate-900">11. Возмещение убытков</h2>
               <p>
-                You agree to indemnify, defend, and hold harmless OrbitSafe VPN and its affiliates from
-                any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’
-                fees) arising out of or related to your use of the Service, your violation of these
-                Terms, or your violation of any law or third-party rights.
+                Вы соглашаетесь защищать, возмещать убытки и удерживать OrbitSafe и его аффилиатов в стороне от любых претензий, обязательств, убытков, потерь и расходов (включая разумные гонорары адвокатов), возникающих в связи с использованием вами Сервиса, нарушением настоящих Условий или нарушением закона или прав третьих лиц.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">12. Termination</h2>
+              <h2 className="text-xl font-semibold text-slate-900">12. Прекращение действия</h2>
               <p>
-                You may stop using the Service at any time. We may suspend or terminate your access to
-                the Service if you violate these Terms, if required by law, or for operational or
-                security reasons. Upon termination, your right to use the Service ceases.
+                Вы можете прекратить использование Сервиса в любое время. Мы можем приостановить или прекратить ваш доступ к Сервису при нарушении вами настоящих Условий, по требованию закона или по операционным соображениям или соображениям безопасности. После прекращения действия ваше право на использование Сервиса прекращается.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">13. Governing Law and Disputes</h2>
+              <h2 className="text-xl font-semibold text-slate-900">13. Применимое право и споры</h2>
               <p>
-                These Terms are governed by the laws of the jurisdiction where OrbitSafe VPN operates,
-                without regard to conflict of law principles. Any disputes arising out of or relating
-                to these Terms or the Service will be resolved in the competent courts of that
-                jurisdiction, unless applicable law provides otherwise.
+                Настоящие Условия регулируются законодательством юрисдикции, в которой работает OrbitSafe, без учёта коллизионных норм. Любые споры, возникающие в связи с настоящими Условиями или Сервисом, разрешаются в компетентных судах этой юрисдикции, если применимое законодательство не предусматривает иное.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">14. Changes to These Terms</h2>
+              <h2 className="text-xl font-semibold text-slate-900">14. Изменения настоящих Условий</h2>
               <p>
-                We may update these Terms from time to time. We will post the current version on this
-                page and update the &quot;Last updated&quot; date. If changes are significant, we may provide
-                additional notice (for example, in-app or by email). Continued use of the Service after
-                the effective date of changes constitutes acceptance.
+                Мы можем периодически обновлять настоящие Условия. Актуальная версия будет опубликована на этой странице с обновлённой датой. При существенных изменениях мы можем дополнительно уведомить вас (например, по электронной почте). Продолжение использования Сервиса после вступления изменений в силу означает их принятие.
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-slate-900">15. Contact</h2>
-              <p>For questions about these Terms, contact us at:</p>
+              <h2 className="text-xl font-semibold text-slate-900">15. Контакты</h2>
+              <p>По вопросам, связанным с настоящими Условиями, обращайтесь:</p>
               <p className="mt-2">
                 <a
                   href="mailto:legal@safeorbitvpn.com"
